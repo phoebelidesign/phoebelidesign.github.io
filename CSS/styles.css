@@ -22,10 +22,11 @@ h3{
     font-weight: 100;
 }
 
-/* General */
-html{
-    scroll-behavior: smooth;
+a {
+    text-decoration: none;
 }
+
+/* General */
 
 main{
     height: 2000px
@@ -35,15 +36,59 @@ img{
     width: 100%;
 }
 
+.portfolio-container {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    padding: 50px;
+    overflow: hidden;
+}
+
+.project {
+    position: absolute;
+    transition: transform 0.2s ease;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.project img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;  /* Maintain aspect ratio while fitting the image inside the box */
+}
+
+.project:hover {
+    transform: scale(0.95);
+    opacity: 0.9;
+}
+
+.project:hover::after {
+    content: attr(data-title);
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: black;
+    font-size: 14px;
+    white-space: nowrap; /* Prevent the text from wrapping */
+}
+
 .centre{
     display: flex;
     width: 20%;
     margin: 100px auto 100px auto;
 }
 
+html,body{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
 body,ul{
     margin: 0;
     padding: 0;
+    height: 100%;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, sans-serif;
 }
 
 ul{
