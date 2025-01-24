@@ -27,7 +27,6 @@ a {
 }
 
 /* General */
-
 main{
     height: 2000px
 }
@@ -81,10 +80,11 @@ img{
 
 html,body{
     scroll-behavior: smooth;
-    overflow-x: hidden;
+    overscroll-behavior: none;
 }
 
 body,ul{
+    overflow-x: hidden;
     margin: 0;
     padding: 0;
     height: 100%;
@@ -95,7 +95,6 @@ ul{
     list-style: none;
 }
 
-/* IDs */
 #bgVideo{
     position: fixed;
     right: 0;
