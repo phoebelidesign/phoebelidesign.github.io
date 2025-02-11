@@ -2,7 +2,7 @@
 
 h1,h2{
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;    
+    font-family: Helvetica, Arial, sans-serif;    
     font-weight: 400;
 }
 
@@ -13,9 +13,10 @@ h1{
 }
 
 h3{
-    font-family: Arial, Helvetica, sans-serif;    
-    font-size: medium;
-    font-weight: 100;
+    text-align: center;
+    font-family: Helvetica, Arial, sans-serif;    
+    font-size: small;
+    font-weight: 200;
 }
 
 a{
@@ -38,8 +39,8 @@ img{
 }
 
 .portfolio-container{
-    position: absolute;
-    width: 100vw;
+    position: relative;
+    width: 100%;
     height: 100vh;
     padding: 50px;
     overflow: hidden;
@@ -53,8 +54,10 @@ img{
 }
 
 .project img{
-    max-width: 100%;
-    max-height: 100%;
+    max-width: 150px;
+    max-height: 150px;
+    width: auto;
+    height: auto;
     object-fit: contain;  /* Maintain aspect ratio while fitting the image inside the box */
 }
 
@@ -68,10 +71,47 @@ img{
     position: absolute;
     top: 100%;
     left: 50%;
-    transform: translateX(-50%);
     color: black;
-    font-size: 14px;
+    font-size: 34px;
+    letter-spacing: -0.5px;
     white-space: nowrap; /* Prevent the text from wrapping */
+    opacity: 1;
+}
+
+.project:nth-child(1)::after{ /* counterpart */
+    top: -20%; left: 50%; 
+}
+
+.project:nth-child(2)::after{ /* eurostile analysis */
+    top: 85%; left: 60%; 
+}
+
+.project:nth-child(3)::after{ 
+    top: 40%; left: -20%; /* kusama poster */
+}
+
+.project:nth-child(4)::after{ /* meltdown */
+    top: 10%; left: 80%; 
+}
+
+.project:nth-child(5)::after{ /* waking moment */
+    top: 75%; left: 40%;
+}
+
+.project:nth-child(6)::after{ /* eurostile specimen */
+    top: 50%; left: -130%;
+}
+
+.project:nth-child(7)::after{ /* holv */
+    top: 50%; left: -50%; 
+}
+
+.project:nth-child(8)::after{ /* carribean blue */
+    top: 10%; left: -150%;
+}
+
+.project:nth-child(9)::after{ /* corporeal */
+    top: 80%; left: -20%;
 }
 
 .centre{
@@ -113,10 +153,10 @@ ul{
     position: fixed;
     bottom: 30px;
     left: 40px;
-    font-size: 60px;
-    font-weight: bold;
+    font-size: 70px;
+    font-weight: 550;
     color: black;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Helvetica, Arial, sans-serif;
     letter-spacing: -2px;
     z-index: 9999;
 }
@@ -149,8 +189,7 @@ ul{
 .navbar li a{
     text-decoration: none;
     color: black;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
+    font-family: Helvetica, Arial, sans-serif;
 }
   
 .navbar li a:hover{
