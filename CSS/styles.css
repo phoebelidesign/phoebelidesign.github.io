@@ -28,10 +28,10 @@ a:hover{
     opacity: 40%;
 }
 
-/************************************* GENERAL *******************************************/
+/************************************* HOME *******************************************/
 
 main{
-    height: 2000px
+    height: 1000px;
 }
 
 img{
@@ -58,24 +58,26 @@ img{
     max-height: 150px;
     width: auto;
     height: auto;
-    object-fit: contain;  /* Maintain aspect ratio while fitting the image inside the box */
+    object-fit: contain; /* Maintain aspect ratio while fitting the image inside the box */
+    transition: transform 0.2s ease;
 }
 
+/* Image on hover */
 .project:hover{
     transform: scale(0.95);
     opacity: 0.9;
 }
 
+/* Caption */
 .project:hover::after{
     content: attr(data-title);
     position: absolute;
-    top: 100%;
-    left: 50%;
     color: black;
-    font-size: 34px;
-    letter-spacing: -0.5px;
-    white-space: nowrap; /* Prevent the text from wrapping */
     opacity: 1;
+    font-size: 12px;
+    font-family: Helvetica, Arial, sans-serif;
+    white-space: nowrap; /* Prevent the text from wrapping */
+    pointer-events: none; /* Prevent interference with hover */
 }
 
 .project:nth-child(1)::after{ /* counterpart */
@@ -83,35 +85,35 @@ img{
 }
 
 .project:nth-child(2)::after{ /* eurostile analysis */
-    top: 85%; left: 60%; 
+    top: 80%; left: 100%; 
 }
 
 .project:nth-child(3)::after{ 
-    top: 40%; left: -20%; /* kusama poster */
+    top: 50%; left: -45%; /* kusama poster */
 }
 
 .project:nth-child(4)::after{ /* meltdown */
-    top: 10%; left: 80%; 
+    top: -15%; left: 20%; 
 }
 
 .project:nth-child(5)::after{ /* waking moment */
-    top: 75%; left: 40%;
+    top: 105%; left: 60%;
 }
 
 .project:nth-child(6)::after{ /* eurostile specimen */
-    top: 50%; left: -130%;
+    top: 70%; left: -40%;
 }
 
 .project:nth-child(7)::after{ /* holv */
-    top: 50%; left: -50%; 
+    top: 50%; left: -65%; 
 }
 
 .project:nth-child(8)::after{ /* carribean blue */
-    top: 10%; left: -150%;
+    top: 10%; left: -53%;
 }
 
 .project:nth-child(9)::after{ /* corporeal */
-    top: 80%; left: -20%;
+    top: 50%; left: 90%;
 }
 
 .centre{
