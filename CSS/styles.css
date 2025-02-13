@@ -17,6 +17,8 @@ h3{
     font-family: Helvetica, Arial, sans-serif;    
     font-size: small;
     font-weight: 200;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
 a{
@@ -31,7 +33,7 @@ a:hover{
 /************************************* HOME *******************************************/
 
 main{
-    height: 1000px;
+    height: 1500px;
 }
 
 img{
