@@ -124,7 +124,7 @@ img{
 }
 
 .project:nth-child(9)::after{ /* corporeal */
-    top: 50%; left: 90%;
+    top: 50%; left: 100%;
 }
 
 .centre{
