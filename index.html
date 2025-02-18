@@ -7,8 +7,10 @@
     <title>Phoebe Li</title>
     <link rel="stylesheet" href="CSS/styles.css">
     <link rel="icon" type="image/png" href="Assets/Images/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">      
 </head>
 <body>
+    <div class="glow"></div>
     <a href="index.html" class="home-link inactive">Phoebe Li</a>
     <div class="navbar">
         <ul class="menu-right">
@@ -45,10 +47,18 @@
             <a href="Work/corporeal.html" class="project" style="top: 85%; left: 10%;" id="corporeal" data-title="Corporeal"> 
                 <img src="Assets/Images/corporeal_thumbnail.webp" alt="Corporeal">
             </a>
-        </div>
-<!--<video autoplay muted loop id="bgVideo">
+        </div>   
+        <!-- <video autoplay muted loop id="bgVideo">
             <source src="Assets/Videos/Bg.mp4" type="video/mp4">
-        </video>-->
+        </video> -->
+        <div class="audio-container">
+            <audio id="audio" autoplay loop>
+                <source src="Assets/Audio/Limerence - Yves Tumor (Instrumental).mp3" type="audio/mp3">
+            </audio>
+            <button id="playPauseBtn" class="play-btn">
+                <i class="fas fa-pause"></i> <!-- Pause icon -->
+            </button>
+        </div>
     </main>
     <script src="JS/scripts.js"></script>
     <footer>
