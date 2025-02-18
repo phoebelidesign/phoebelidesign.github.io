@@ -150,13 +150,83 @@ ul{
     list-style: none;
 }
 
-#bgVideo{
+/* Position the play/pause button in the bottom right corner */
+.audio-container{
+    position: relative;
+}
+
+.play-btn{
+    position: fixed;
+    bottom: 20px;
+    right: 40px;
+    color: lightgrey;
+    background-color: transparent;
+    padding: 10px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 50px; /* Icon size */
+    transition: color 0.2s ease;
+}
+
+.play-btn:hover{
+    color: black;
+}
+
+.play-btn i{
+    pointer-events: none; /* Prevents icon from interfering with click events */
+}
+
+#bgVideo{ /* not in use */
     position: fixed;
     right: 0;
     bottom: 0;
     min-width: 100%;
     min-height: 100%;
     z-index: -1;
+}
+
+.glow{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background-color: rgba(121, 177, 203, 0.6); /* Light, fire-like color */
+    border-radius: 50%; /* You can try a different approach later */
+    pointer-events: none;
+    transition: transform 0.1s ease-out, opacity 0.2s ease-in-out;
+    box-shadow: 0 0 80px rgba(121, 177, 203, 0.8), 
+                0 0 200px rgba(137, 198, 255, 0.7), 
+                0 0 300px rgb(140, 193, 221);
+    mix-blend-mode: screen;
+    animation: pulse 3s infinite ease-out;
+}
+
+/* Fire pulse animation */
+@keyframes pulse{
+    0% {
+        transform: scale(1);
+        opacity: 0.2;
+    }
+    50% {
+        transform: scale(1.3); /* Slightly bigger */
+        opacity: 0.2;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.2;
+    }
+}
+
+.glow::before{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 00%;
+    height: 100%;
+    background: inherit;
+    filter: blur(300px); /* Larger blur for a softer, more ambient effect */
+    pointer-events: none;
 }
 
 /************************************* NAVBAR *******************************************/
