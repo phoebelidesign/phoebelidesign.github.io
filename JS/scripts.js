@@ -12,14 +12,3 @@ playPauseBtn.addEventListener('click', function() {
         playPauseBtn.innerHTML = '<i class="fas fa-play"></i>'; // Change to play icon
     }
 });
-
-// Glow effect
-const glow = document.querySelector('.glow');
-
-document.addEventListener('mousemove', (e) => {
-    const mouseX = e.pageX; // Using pageX for position relative to the whole page
-    const mouseY = e.pageY; // Using pageY for position relative to the whole page
-
-    glow.style.left = `${mouseX - glow.offsetWidth / 2}px`; // Centers the glow on the mouse
-    glow.style.top = `${mouseY - glow.offsetHeight / 2}px`; // Centers the glow on the mouse
-});
