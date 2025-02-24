@@ -6,15 +6,6 @@ h1,h2,h3,h4,p{
     padding-right: 10%;
 }
 
-.pages{
-    margin-bottom: 100px;
-}
-
-.pages p{
-    padding-left: 3%;
-    padding-right: 3%;
-}
-
 h1{ /* project headings */
     font-size: xx-large;
     font-weight: 400;
@@ -27,7 +18,7 @@ h2{
     font-style: italic;
 }
 
-h3,p{ /* about, contact. project descriptions */
+p{ /* about, contact. project descriptions */
     font-size: medium;
     font-weight: 200;
 }
@@ -47,6 +38,21 @@ a:hover{
     opacity: 40%;
 }
 
+.pages{
+    margin-bottom: 100px;
+}
+
+.pages p{
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+/* Target blank icon */
+.pages a[target="_blank"]:after{
+    content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVR42qXKwQkAIAxDUUdxtO6/RBQkQZvSi8I/pL4BoGw/XPkh4XigPmsUgh0626AjRsgxHTkUThsG2T/sIlzdTsp52kSS1wAAAABJRU5ErkJggg==);
+    margin: 0 7px;
+}
+
 /************************************* HOME *******************************************/
 
 main{
@@ -60,17 +66,15 @@ img{
 .portfolio-container{
     position: relative;
     width: 100%;
-    height: 100vh;
+    min-height: 90vh;
     overflow: hidden;
-    padding-bottom: 10%;
-    margin-bottom: 15%;
 }
 
 .project{
     position: absolute;
-    transition: transform 0.2s ease;
     opacity: 1;
     cursor: pointer;
+    transition: transform 0.2s ease;
 }
 
 .project img{
@@ -100,48 +104,60 @@ img{
     pointer-events: none; /* Prevent interference with hover */
 }
 
-.project:nth-child(1)::after{ /* counterpart */
-    top: -20%; left: 50%; 
+/* CAPTION POSITIONING */
+.project:nth-child(1)::after { top: -20%; left: 50%; } /* counterpart */
+.project:nth-child(2)::after { top: 105%; left: -20%; } /* eurostile analysis */
+.project:nth-child(3)::after { top: 50%; left: -45%; } /* kusama poster */
+.project:nth-child(4)::after { top: -14%; left: 30%; } /* meltdown */
+.project:nth-child(5)::after { top: 105%; left: 60%; } /* waking moment */
+.project:nth-child(6)::after { top: 105%; left: -20%; } /* eurostile specimen */
+.project:nth-child(7)::after { top: 40%; left: -65%; } /* holv */
+.project:nth-child(8)::after { top: 10%; left: -53%; } /* carribean blue */
+.project:nth-child(9)::after { top: 50%; left: 100%; } /* corporeal */
+
+/* Mobile Styles (Responsive Design) */
+@media (max-width: 768px){
+    .project img{
+        max-width: 100px; /* Make images smaller on mobile */
+        max-height: 100px;
+    }
+
+    .project:nth-child(1) { top: 5%; left: 10%; }
+    .project:nth-child(2) { top: 30%; left: 55%; }
+    .project:nth-child(3) { top: 25%; left: 15%; }
+    .project:nth-child(4) { top: 45%; left: 50%; }
+    .project:nth-child(5) { top: 60%; left: 40%; }
+    .project:nth-child(6) { top: 75%; left: 25%; }
+    .project:nth-child(7) { top: 85%; left: 60%; }
+    .project:nth-child(8) { top: 15%; left: 50%; }
+    .project:nth-child(9) { top: 35%; left: 70%; }
 }
 
-.project:nth-child(2)::after{ /* eurostile analysis */
-    top: 80%; left: 100%; 
+@media (max-width: 480px){
+    .project img{
+        max-width: 80px; /* Even smaller on smaller screens */
+        max-height: 80px;
+    }
+
+    .project:nth-child(1) { top: 5%; left: 5%; }
+    .project:nth-child(2) { top: 25%; left: 50%; }
+    .project:nth-child(3) { top: 40%; left: 10%; }
+    .project:nth-child(4) { top: 55%; left: 50%; }
+    .project:nth-child(5) { top: 70%; left: 30%; }
+    .project:nth-child(6) { top: 80%; left: 50%; }
+    .project:nth-child(7) { top: 90%; left: 10%; }
+    .project:nth-child(8) { top: 20%; left: 60%; }
+    .project:nth-child(9) { top: 50%; left: 80%; }
 }
 
-.project:nth-child(3)::after{ 
-    top: 50%; left: -45%; /* kusama poster */
-}
-
-.project:nth-child(4)::after{ /* meltdown */
-    top: -14%; left: 20%; 
-}
-
-.project:nth-child(5)::after{ /* waking moment */
-    top: 105%; left: 60%;
-}
-
-.project:nth-child(6)::after{ /* eurostile specimen */
-    top: 105%; left: -20%;
-}
-
-.project:nth-child(7)::after{ /* holv */
-    top: 50%; left: -65%; 
-}
-
-.project:nth-child(8)::after{ /* carribean blue */
-    top: 10%; left: -53%;
-}
-
-.project:nth-child(9)::after{ /* corporeal */
-    top: 50%; left: 100%;
-}
-
+/* Flex container for centering */
 .centre{
     display: flex;
     width: 20%;
-    margin: 100px auto 100px auto;
+    margin: 100px auto;
 }
 
+/* Basic HTML and body setup */
 html,body{
     scroll-behavior: smooth;
     overscroll-behavior: none;
@@ -152,7 +168,6 @@ body,ul{
     margin: 0;
     padding: 0;
     height: 100%;
-    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, sans-serif;
 }
 
 ul{
@@ -202,7 +217,7 @@ ul{
     position: fixed;
     bottom: 3%;
     left: 3%;
-    font-size: 500%;
+    font-size: 5em;
     font-weight: 550;
     color: black;
     font-family: Helvetica, Arial, sans-serif;
@@ -304,6 +319,26 @@ ul{
     width: 100%;
     height: 100%;
     border: 0;
+}
+
+/* Mobile & Tablet View: Stack sections vertically */
+@media (max-width: 768px){
+    .project-page{
+        flex-direction: column; /* Stack sections */
+        padding-right: 0;
+    }
+
+    .text-section{
+        width: 100%;
+        position: static; /* Remove sticky so it scrolls normally */
+        padding-bottom: 5%; /* Add some padding */
+        text-align: center;
+    }
+
+    .image-section{
+        width: 100%;
+        padding-bottom: 20%;
+    }
 }
 
 /************************************* FOOTER *******************************************/
