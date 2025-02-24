@@ -233,6 +233,23 @@ ul{
     pointer-events: none;
 }
 
+/* Mobile Styles (Responsive Design) */
+@media (max-width: 768px) {
+    .home-link {
+        font-size: 3em; /* Smaller font size for tablets and below */
+        bottom: 5%; /* Slightly adjust position */
+        left: 5%;   /* Slightly adjust position */
+    }
+}
+
+@media (max-width: 480px) {
+    .home-link {
+        font-size: 2.5em; /* Even smaller font size for mobile phones */
+        bottom: 7%; /* Adjust position for smaller screens */
+        left: 7%;   /* Adjust position for smaller screens */
+    }
+}
+
 /* Navbar Styling */
 .navbar{
     display: flex;
