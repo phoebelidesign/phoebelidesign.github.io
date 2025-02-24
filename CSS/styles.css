@@ -223,7 +223,7 @@ ul{
     display: flex;
     justify-content: space-between; /* Space between left and right menus */
     align-items: center; /* Center items vertically */
-    padding: 2% 3%;
+    padding: 30px 50px;
     position: sticky;
     top: 0; /* Stick the navbar to the top of the viewport */
     z-index: 1000; /* Ensure it stays above other content */
