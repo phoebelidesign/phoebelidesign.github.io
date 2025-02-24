@@ -223,6 +223,20 @@ ul{
     pointer-events: none; /* Prevents icon from interfering with click events */
 }
 
+@media (max-width: 768px){
+    .play-btn{
+        bottom: 5%;
+        right: 5%;
+    }
+}
+
+@media (max-width: 480px){
+    .play-btn{
+        bottom: 7%;
+        right: 7%;
+    }
+}
+
 #bgVideo{ /* not in use */
     position: fixed;
     right: 0;
