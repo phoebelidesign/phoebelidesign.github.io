@@ -88,7 +88,7 @@ img{
 .portfolio-container{
     position: relative;
     width: 100%;
-    min-height: 90vh;
+    min-height: 85vh;
     overflow: hidden;
 }
 
