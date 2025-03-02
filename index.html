@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,55 +10,66 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">      
 </head>
 <body>
-    <a href="index.html" class="home-link inactive">Phoebe Li</a>
-    <nav class="navbar">
-        <ul class="menu-right">
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-    <main>
-        <div class="portfolio-container">
-            <a href="Work/counterpart.html" class="project" style="top: 6%; left: 20%" data-title="Counterpart" aria-label="Counterpart"> 
-                <img src="Assets/Images/counterpart-1.webp" alt="Counterpart" loading="lazy">
-            </a>
-            <a href="Work/eurostile-analysis.html" class="project" style="top: 44%; left: 59%;" data-title="Eurostile Analysis" aria-label="Eurostile Analysis"> 
-                <img src="Assets/Images/eurostile-analysis_thumbnail.webp" alt="Eurostile Analysis" loading="lazy">
-            </a>
-            <a href="Work/yayoi-kusama.html" class="project" style="top: 27%; left: 10%;" data-title="Yayoi Kusama" aria-label="Yayoi Kusama"> 
-                <img src="Assets/Images/yayoi-kusama_thumbnail.webp" alt="Yayoi Kusama" loading="lazy">
-            </a>
-            <a href="Work/meltdown.html" class="project" style="top: 70%; left: 75%;" data-title="Meltdown" aria-label="Meltdown"> 
-                <img src="Assets/Images/meltdown-massiveattack.webp" alt="Meltdown" loading="lazy">
-            </a>
-            <a href="Work/waking-moment.html" class="project" style="top: 62%; left: 30%;" data-title="Waking Moment" aria-label="Waking Moment"> 
-                <img src="Assets/Images/waking-moment_thumbnail.gif" alt="Waking Moment" loading="lazy">
-            </a>
-            <a href="Work/eurostile-specimen.html" class="project" style="top: 15%; left: 80%;" data-title="Eurostile Specimen" aria-label="Eurostile Specimen"> 
-                <img src="Assets/Images/eurostile-specimen-2.webp" alt="Eurostile Specimen" loading="lazy">
-            </a>
-            <a href="Work/heaven-or-las-vegas.html" class="project" style="top: 0%; left: 65%;" data-title="Heaven or Las Vegas" aria-label="Heaven or Las Vegas"> 
-                <img src="Assets/Images/holv_thumbnail.webp" alt="Heaven or Las Vegas" loading="lazy">
-            </a>
-            <a href="Work/caribbean-blue.html" class="project" style="top: 27%; left: 40%;" data-title="Caribbean Blue" aria-label="Caribbean Blue"> 
-                <img src="Assets/Images/cb-2.webp" alt="Caribbean Blue" loading="lazy">
-            </a>
-            <a href="Work/corporeal.html" class="project" style="top: 10%; left: 50%;" data-title="Corporeal" aria-label="Corporeal"> 
-                <img src="Assets/Images/corporeal-3.webp" alt="Corporeal" loading="lazy">
-            </a>
-        </div>
-        <div class="audio-container">
-            <audio id="audio" loop>
-                <source src="Assets/Audio/goodnight-and-go.mp3" type="audio/mp3">
-            </audio>
-            <button id="playPauseBtn" class="play-btn">
-                <i class="fas fa-play"></i>
-            </button>
-        </div>
-    </main>
-    <footer>
-        <h4>© Phoebe Li 2025</h4>
-    </footer>
-    <script src="JS/scripts.js" defer></script>
+    <!-- Intro Video Overlay -->
+    <div id="intro-overlay">
+        <video id="intro-video" autoplay muted>
+            <source src="Assets/Videos/Bg.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <button id="skip-button">Skip</button>
+    </div>
+    <!-- Main Content -->
+    <div id="main-content" class="hidden">
+        <a href="index.html" class="home-link inactive">Phoebe Li</a>
+        <nav class="navbar" role="navigation">
+            <ul class="menu-right">
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <main>
+            <div class="portfolio-container">
+                <a href="Work/counterpart.html" class="project" style="top: 6%; left: 20%" data-title="Counterpart" aria-label="Counterpart"> 
+                    <img src="Assets/Images/counterpart-1.webp" alt="Counterpart" loading="lazy">
+                </a>
+                <a href="Work/eurostile-analysis.html" class="project" style="top: 44%; left: 59%;" data-title="Eurostile Analysis" aria-label="Eurostile Analysis"> 
+                    <img src="Assets/Images/eurostile-analysis_thumbnail.webp" alt="Eurostile Analysis" loading="lazy">
+                </a>
+                <a href="Work/yayoi-kusama.html" class="project" style="top: 27%; left: 10%;" data-title="Yayoi Kusama" aria-label="Yayoi Kusama"> 
+                    <img src="Assets/Images/yayoi-kusama_thumbnail.webp" alt="Yayoi Kusama" loading="lazy">
+                </a>
+                <a href="Work/meltdown.html" class="project" style="top: 70%; left: 75%;" data-title="Meltdown" aria-label="Meltdown"> 
+                    <img src="Assets/Images/meltdown-massiveattack.webp" alt="Meltdown" loading="lazy">
+                </a>
+                <a href="Work/waking-moment.html" class="project" style="top: 62%; left: 30%;" data-title="Waking Moment" aria-label="Waking Moment"> 
+                    <img src="Assets/Images/waking-moment_thumbnail.gif" alt="Waking Moment" loading="lazy">
+                </a>
+                <a href="Work/eurostile-specimen.html" class="project" style="top: 15%; left: 80%;" data-title="Eurostile Specimen" aria-label="Eurostile Specimen"> 
+                    <img src="Assets/Images/eurostile-specimen-2.webp" alt="Eurostile Specimen" loading="lazy">
+                </a>
+                <a href="Work/heaven-or-las-vegas.html" class="project" style="top: 0%; left: 65%;" data-title="Heaven or Las Vegas" aria-label="Heaven or Las Vegas"> 
+                    <img src="Assets/Images/holv_thumbnail.webp" alt="Heaven or Las Vegas" loading="lazy">
+                </a>
+                <a href="Work/caribbean-blue.html" class="project" style="top: 27%; left: 40%;" data-title="Caribbean Blue" aria-label="Caribbean Blue"> 
+                    <img src="Assets/Images/cb-2.webp" alt="Caribbean Blue" loading="lazy">
+                </a>
+                <a href="Work/corporeal.html" class="project" style="top: 10%; left: 50%;" data-title="Corporeal" aria-label="Corporeal"> 
+                    <img src="Assets/Images/corporeal-3.webp" alt="Corporeal" loading="lazy">
+                </a>
+            </div>
+            <div class="audio-container">
+                <audio id="audio" loop>
+                    <source src="Assets/Audio/goodnight-and-go.mp3" type="audio/mp3">
+                </audio>
+                <button id="playPauseBtn" class="play-btn">
+                    <i class="fas fa-play"></i>
+                </button>
+            </div>
+        </main>
+        <script src="JS/scripts.js" defer></script>
+        <footer>
+            <h4>© Phoebe Li 2025</h4>
+        </footer>
+    </div>
 </body>
 </html>

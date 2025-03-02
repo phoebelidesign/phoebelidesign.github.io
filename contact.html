@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,20 +9,29 @@
 </head>
 <body>
     <a href="index.html" class="home-link">Phoebe Li</a>
-    <nav class="navbar">
+    <nav class="navbar" role="navigation">
         <ul class="menu-right">
             <li><a href="about.html">About</a></li>
             <li><a href="contact.html" class="active">Contact</a></li>
         </ul>
     </nav>
     <main>
-        <div class="pages">
+        <img src="Assets/Images/contact-card.webp" usemap="#contactCardMap" alt="contact card" class="centre">
+        <map name="contactCardMap">
+            <!-- Email Area -->
+            <area shape="rect" coords="15,10,245,30" href="mailto:phoebeli137@gmail.com?subject=What's%20up?" alt="Email">
+            <!-- Phone Number Area -->
+            <area shape="rect" coords="10,35,180,50" href="tel:+61426008140" alt="Phone">
+            <!-- Website Area -->
+            <area shape="rect" coords="135,200,370,220" href="https://phoebelidesign.github.io" target="_blank" alt="Website">
+        </map>
+       <!-- <div class="pages">
             <p>
                 <a href="mailto:phoebeli137@gmail.com?subject=What's%20up?" target="_blank">Email</a>
                 <br>
                 <a href="https://www.instagram.com/phoebeli111/" target="_blank" rel="noopener noreferrer">Instagram</a>
             </p>
-        </div>
+        </div>-->
     </main>
     <script src="JS/scripts.js"></script>
     <footer>

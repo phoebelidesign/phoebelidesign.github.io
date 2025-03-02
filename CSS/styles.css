@@ -77,6 +77,48 @@ a:hover{
     }
 }
 
+/************************************* INTRO VIDEO OVERLAY *******************************************/
+#intro-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1000;
+}
+
+#intro-video{
+    width: 100%;
+    height: auto;
+    max-height: 100vh;
+    object-fit: cover;
+}
+
+/* Skip Button */
+#skip-button{
+    position: absolute;
+    bottom: 50%;
+    background: none;
+    color: black;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#skip-button:hover{
+    color: rgba(0, 0, 0, 0.4);
+}
+
+/* Hide Main Content Initially */
+.hidden{
+    display: none;
+}
+
 /************************************* HOME *******************************************/
 
 main{
@@ -90,7 +132,7 @@ img{
 .portfolio-container{
     position: relative;
     width: 100%;
-    min-height: 90vh;
+    min-height: 85vh;
     overflow: hidden;
 }
 
@@ -175,11 +217,24 @@ img{
     .project:nth-child(9) { top: 50%; left: 80%; }
 }
 
-/* Flex container for centering */
-.centre{
-    display: flex;
-    width: 20%;
-    margin: 100px auto;
+.centre {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    width: 25%;
+    transform: translate(-50%, -50%);
+}
+
+@media (max-width: 768px){
+    .centre{
+        width: 50%;
+    } 
+}
+
+@media (max-width: 480px){
+    .centre{
+        width: 75%;
+    }
 }
 
 /* Basic HTML and body setup */
@@ -315,7 +370,7 @@ ul{
 }
   
 .navbar li a:hover{
-    opacity: 0.3;
+    opacity: 0.4;
 }
 
 /* Left and Right Alignment */
