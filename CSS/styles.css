@@ -9,10 +9,10 @@ h1,h2,h3,h4,p{
 h1{ /* project headings */
     font-size: xx-large;
     font-weight: 400;
-    line-height: 0;
+    line-height: 1;
 }
 
-h2{
+h2{ /* project subheading */
     font-size: large;
     font-weight: 200;
     font-style: italic;
@@ -26,7 +26,7 @@ p{ /* about, contact. project descriptions */
 h4{ /* copyright */
     text-align: center;
     font-size: small;
-    font-weight: 100;
+    font-weight: 200;
 }
 
 a{
@@ -35,11 +35,11 @@ a{
 }
 
 a:hover{
-    opacity: 40%;
+    opacity: 0.4;
 }
 
 .pages{
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 }
 
 .pages p{
@@ -88,7 +88,7 @@ img{
 .portfolio-container{
     position: relative;
     width: 100%;
-    min-height: 85vh;
+    min-height: 90vh;
     overflow: hidden;
 }
 
@@ -118,6 +118,7 @@ img{
 .project:hover::after{
     content: attr(data-title);
     position: absolute;
+    transform: translate(-50%, -50%);
     color: black;
     opacity: 1;
     font-size: 12px;
@@ -126,16 +127,16 @@ img{
     pointer-events: none; /* Prevent interference with hover */
 }
 
-/* CAPTION POSITIONING */
-.project:nth-child(1)::after { top: -20%; left: 50%; } /* counterpart */
-.project:nth-child(2)::after { top: 105%; left: -20%; } /* eurostile analysis */
-.project:nth-child(3)::after { top: 50%; left: -45%; } /* kusama poster */
-.project:nth-child(4)::after { top: -14%; left: 30%; } /* meltdown */
-.project:nth-child(5)::after { top: 105%; left: 60%; } /* waking moment */
-.project:nth-child(6)::after { top: 105%; left: -20%; } /* eurostile specimen */
-.project:nth-child(7)::after { top: 40%; left: -65%; } /* holv */
-.project:nth-child(8)::after { top: 10%; left: -53%; } /* carribean blue */
-.project:nth-child(9)::after { top: 50%; left: 100%; } /* corporeal */
+/* Caption positioning */
+.project:nth-child(1)::after { top: -10%; left: 50%; } /* counterpart */
+.project:nth-child(2)::after { top: 85%; left: -25%; } /* eurostile analysis */
+.project:nth-child(3)::after { top: 60%; left: -5%; } /* yayoi kusama */
+.project:nth-child(4)::after { top: -8%; left: 35%; } /* meltdown */
+.project:nth-child(5)::after { top: 110%; left: 60%; } /* waking moment */
+.project:nth-child(6)::after { top: 110%; left: -10%; } /* eurostile specimen */
+.project:nth-child(7)::after { top: 40%; left: -25%; } /* holv */
+.project:nth-child(8)::after { top: 20%; left: -17%; } /* caribbean blue */
+.project:nth-child(9)::after { top: 70%; left: 115%; } /* corporeal */
 
 /* Mobile Styles (Responsive Design) */
 @media (max-width: 768px){
@@ -211,7 +212,7 @@ ul{
     border: none;
     border-radius: 50%;
     cursor: pointer;
-    font-size: 40px; /* Icon size */
+    font-size: 48px; /* Icon size */
     transition: color 0.2s ease;
 }
 
@@ -227,13 +228,15 @@ ul{
     .play-btn{
         bottom: 5%;
         right: 5%;
+        font-size: 40px; /* Icon size */
     }
 }
 
 @media (max-width: 480px){
     .play-btn{
-        bottom: 7%;
-        right: 7%;
+        bottom: 5%;
+        right: 5%;
+        font-size: 32px; /* Icon size */
     }
 }
 
@@ -262,7 +265,7 @@ ul{
 }
 
 .home-link:hover{
-    opacity: 40%;
+    opacity: 0.4;
 }
 
 .home-link.inactive{
@@ -272,7 +275,7 @@ ul{
 /* Mobile Styles (Responsive Design) */
 @media (max-width: 768px){
     .home-link{
-        font-size: 3em; /* Smaller font size for tablets and below */
+        font-size: 3.5em; /* Smaller font size for tablets and below */
         bottom: 5%; /* Slightly adjust position */
         left: 5%;   /* Slightly adjust position */
     }
@@ -280,9 +283,9 @@ ul{
 
 @media (max-width: 480px){
     .home-link{
-        font-size: 2.5em; /* Even smaller font size for mobile phones */
-        bottom: 7%; /* Adjust position for smaller screens */
-        left: 7%;   /* Adjust position for smaller screens */
+        font-size: 3em; /* Even smaller font size for mobile phones */
+        bottom: 5%; /* Adjust position for smaller screens */
+        left: 5%;   /* Adjust position for smaller screens */
     }
 }
 
@@ -310,7 +313,7 @@ ul{
 }
   
 .navbar li a:hover{
-    opacity: 30%;
+    opacity: 0.3;
 }
 
 /* Left and Right Alignment */
