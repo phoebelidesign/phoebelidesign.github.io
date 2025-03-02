@@ -10,12 +10,14 @@ h1{ /* project headings */
     font-size: xx-large;
     font-weight: 400;
     line-height: 1;
+    margin-bottom: 5px;
 }
 
 h2{ /* project subheading */
     font-size: large;
     font-weight: 200;
     font-style: italic;
+    margin-top: 5px;
 }
 
 p{ /* about, contact. project descriptions */
