@@ -182,6 +182,7 @@ img{
 .project:nth-child(7)::after { top: 40%; left: -25%; } /* holv */
 .project:nth-child(8)::after { top: 20%; left: -17%; } /* caribbean blue */
 .project:nth-child(9)::after { top: 70%; left: 115%; } /* corporeal */
+.project:nth-child(10)::after { top: 0%; left: 85%; } /* a2 milk */
 
 /* Mobile Styles (Responsive Design) */
 @media (max-width: 768px){
