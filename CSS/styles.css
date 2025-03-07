@@ -182,7 +182,7 @@ img{
 .project:nth-child(7)::after { top: 40%; left: -25%; } /* holv */
 .project:nth-child(8)::after { top: 20%; left: -17%; } /* caribbean blue */
 .project:nth-child(9)::after { top: 70%; left: 115%; } /* corporeal */
-.project:nth-child(10)::after { top: 0%; left: 85%; } /* a2 milk */
+.project:nth-child(10)::after { top: -15%; left: 85%; } /* a2 milk */
 
 /* Mobile Styles (Responsive Design) */
 @media (max-width: 768px){
@@ -494,3 +494,30 @@ footer {
         width: 80vw;
     }   
 }
+ /*
+// Intro video overlay
+document.addEventListener("DOMContentLoaded", function () {
+    const introOverlay = document.getElementById("intro-overlay");
+    const introVideo = document.getElementById("intro-video");
+    const skipButton = document.getElementById("skip-button");
+    const mainContent = document.getElementById("main-content");
+
+    // Check if the intro has already played in this session
+    if (sessionStorage.getItem("hasSeenIntro")) {
+        // Hide the intro and show the main content immediately
+        introOverlay.style.display = "none";
+        mainContent.classList.remove("hidden");
+    } else {
+        // If it's the first time in this session, show the intro
+        function endIntro() {
+            introOverlay.style.display = "none"; // Hide the intro overlay
+            mainContent.classList.remove("hidden"); // Show the main content
+            sessionStorage.setItem("hasSeenIntro", "true"); // Mark intro as seen
+        }
+
+        // Bind skip button and video end event
+        skipButton.addEventListener("click", endIntro);
+        introVideo.addEventListener("ended", endIntro);
+    }
+});
+*/
