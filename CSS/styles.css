@@ -166,7 +166,7 @@ img{
     transform: translate(-50%, -50%);
     color: black;
     opacity: 1;
-    font-size: 12px;
+    font-size: 24px;
     font-family: Helvetica, Arial, sans-serif;
     white-space: nowrap; /* Prevent the text from wrapping */
     pointer-events: none; /* Prevent interference with hover */
@@ -174,15 +174,15 @@ img{
 
 /* Caption positioning */
 .project:nth-child(1)::after { top: -10%; left: 50%; } /* counterpart */
-.project:nth-child(2)::after { top: 85%; left: -25%; } /* eurostile analysis */
+.project:nth-child(2)::after { top: 107%; left: 30%; } /* eurostile analysis */
 .project:nth-child(3)::after { top: 60%; left: -5%; } /* yayoi kusama */
-.project:nth-child(4)::after { top: -8%; left: 35%; } /* meltdown */
-.project:nth-child(5)::after { top: 110%; left: 60%; } /* waking moment */
+.project:nth-child(4)::after { top: -10%; left: 25%; } /* meltdown */
+.project:nth-child(5)::after { top: 110%; left: 80%; } /* waking moment */
 .project:nth-child(6)::after { top: 110%; left: -10%; } /* eurostile specimen */
-.project:nth-child(7)::after { top: 40%; left: -25%; } /* holv */
-.project:nth-child(8)::after { top: 20%; left: -17%; } /* caribbean blue */
+.project:nth-child(7)::after { top: 20%; left: -25%; } /* holv */
+.project:nth-child(8)::after { top: 12%; left: -17%; } /* caribbean blue */
 .project:nth-child(9)::after { top: 70%; left: 115%; } /* corporeal */
-.project:nth-child(10)::after { top: -15%; left: 85%; } /* a2 milk */
+.project:nth-child(10)::after { top: -15%; left: 45%; } /* a2 milk */
 
 /* Mobile Styles (Responsive Design) */
 @media (max-width: 768px){
@@ -200,6 +200,10 @@ img{
     .project:nth-child(7) { top: 85%; left: 60%; }
     .project:nth-child(8) { top: 15%; left: 50%; }
     .project:nth-child(9) { top: 35%; left: 70%; }
+
+    .project:hover::after{
+        font-size: 16px;
+    }
 }
 
 @media (max-width: 480px){
