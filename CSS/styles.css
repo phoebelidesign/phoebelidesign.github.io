@@ -26,6 +26,13 @@ p{ /* about, contact. project descriptions */
     font-weight: 200;
 }
 
+.lineheight{ /* black star ★ emoji */
+    line-height: 1;
+    vertical-align: middle;
+    overflow: hidden;
+    display: inline-block;
+}
+
 h4{ /* copyright */
     text-align: center;
     font-size: small;
@@ -420,7 +427,7 @@ ul{
 .text-section{
     width: 35%;
     position: sticky;
-    top: 85px;
+    top: 80px;
 }
 
 .image-section{
@@ -514,6 +521,7 @@ footer {
         width: 80vw;
     }   
 }
+
  /*
 // Intro video overlay
 document.addEventListener("DOMContentLoaded", function () {
