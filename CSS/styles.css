@@ -342,7 +342,7 @@ ul{
     position: fixed;
     bottom: 3%;
     left: 3%;
-    font-size: 5em;
+    font-size: 4em;
     font-weight: 550;
     color: black;
     font-family: Helvetica, Arial, sans-serif;
@@ -464,7 +464,7 @@ ul{
 }
 
 /* Mobile & Tablet View: Stack sections vertically */
-@media (max-width: 768px){
+@media (max-width: 992px){
     .project-page{
         flex-direction: column; /* Stack sections */
         padding-right: 0;
