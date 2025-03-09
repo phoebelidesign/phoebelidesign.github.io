@@ -174,7 +174,7 @@ img{
     color: black;
     opacity: 1;
     font-size: 24px;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: Helvetica, Arial, sans-serif;
     white-space: nowrap; /* Prevent the text from wrapping */
     pointer-events: none; /* Prevent interference with hover */
     z-index: 500;
