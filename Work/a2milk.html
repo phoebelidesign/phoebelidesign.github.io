@@ -9,7 +9,7 @@
 </head>
 <body>
     <a href="../index.html" class="home-link">Phoebe Li</a>
-    <nav class="navbar" role="navigation">
+    <nav class="navbar" role="navigation" aria-label="Main Navigation">
         <ul class="menu-right">
             <li><a href="../about.html">About</a></li>
             <li><a href="../contact.html">Contact</a></li>
@@ -36,8 +36,16 @@
                 <img src="../Assets/Images/a2milk-range.webp">
             </div>
         </div>
+        <div class="audio-container">
+            <audio id="audio" loop>
+                <source src="Assets/Audio/goodnight-and-go.mp3" type="audio/mp3">
+            </audio>
+            <button id="playPauseBtn" class="play-btn" aria-label="Play/Pause audio">
+                <i class="fas fa-play"></i>
+            </button>
+        </div>
     </main>
-    <script src="../JS/scripts.js"></script>
+    <script src="../JS/scripts.js" defer></script>
     <footer>
         <h4>© Phoebe Li 2025</h4>
     </footer>

@@ -7,7 +7,8 @@
     <title>Phoebe Li</title>
     <link rel="stylesheet" href="CSS/styles.css">
     <link rel="icon" type="image/png" href="Assets/Images/favicon.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">      
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://use.typekit.net/luq7tpc.css">    
 </head>
 <body>
     <!-- Intro Video Overlay
@@ -16,12 +17,12 @@
             <source src="Assets/Videos/Bg.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
-        <button id="skip-button">Skip</button>
+        <button id="skip-button" aria-label="Skip Intro">Skip</button>
     </div>-->
-    <!-- Main Content
-    <div id="main-content" class="hidden">-->
+    <!--Main Content-->
+    <div id="main-content">
         <a href="index.html" class="home-link inactive">Phoebe Li</a>
-        <nav class="navbar" role="navigation">
+        <nav class="navbar" role="navigation" aria-label="Main Navigation">
             <ul class="menu-right">
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
@@ -35,8 +36,8 @@
                 <a href="Work/eurostile-analysis.html" class="project" style="top: 44%; left: 59%;" data-title="Eurostile Analysis" aria-label="Eurostile Analysis"> 
                     <img src="Assets/Images/eurostile-analysis_thumbnail.webp" alt="Eurostile Analysis" loading="lazy">
                 </a>
-                <a href="Work/yayoi-kusama.html" class="project" style="top: 27%; left: 10%;" data-title="Kusama" aria-label="Kusama"> 
-                    <img src="Assets/Images/yayoi-kusama_thumbnail.webp" alt="Kusama" loading="lazy">
+                <a href="Work/kusama.html" class="project" style="top: 27%; left: 10%;" data-title="Kusama" aria-label="Kusama"> 
+                    <img src="Assets/Images/kusama_thumbnail.webp" alt="Kusama" loading="lazy">
                 </a>
                 <a href="Work/meltdown.html" class="project" style="top: 70%; left: 75%;" data-title="Meltdown" aria-label="Meltdown"> 
                     <img src="Assets/Images/meltdown-massiveattack.webp" alt="Meltdown" loading="lazy">
@@ -64,7 +65,7 @@
                 <audio id="audio" loop>
                     <source src="Assets/Audio/goodnight-and-go.mp3" type="audio/mp3">
                 </audio>
-                <button id="playPauseBtn" class="play-btn">
+                <button id="playPauseBtn" class="play-btn" aria-label="Play/Pause audio">
                     <i class="fas fa-play"></i>
                 </button>
             </div>

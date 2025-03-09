@@ -170,21 +170,33 @@ img{
     font-family: Helvetica, Arial, sans-serif;
     white-space: nowrap; /* Prevent the text from wrapping */
     pointer-events: none; /* Prevent interference with hover */
+    z-index: 500;
 }
 
 /* Caption positioning */
 .project:nth-child(1)::after { top: -10%; left: 50%; } /* counterpart */
-.project:nth-child(2)::after { top: 107%; left: 30%; } /* eurostile analysis */
+.project:nth-child(2)::after { top: 107%; left: 40%; } /* eurostile analysis */
 .project:nth-child(3)::after { top: 60%; left: -5%; } /* yayoi kusama */
-.project:nth-child(4)::after { top: -10%; left: 25%; } /* meltdown */
+.project:nth-child(4)::after { top: -8%; left: 25%; } /* meltdown */
 .project:nth-child(5)::after { top: 110%; left: 80%; } /* waking moment */
-.project:nth-child(6)::after { top: 110%; left: -10%; } /* eurostile specimen */
-.project:nth-child(7)::after { top: 20%; left: -25%; } /* holv */
-.project:nth-child(8)::after { top: 12%; left: -17%; } /* caribbean blue */
-.project:nth-child(9)::after { top: 70%; left: 115%; } /* corporeal */
-.project:nth-child(10)::after { top: -15%; left: 45%; } /* a2 milk */
+.project:nth-child(6)::after { top: 108%; left: -10%; } /* eurostile specimen */
+.project:nth-child(7)::after { top: 20%; left: -61%; } /* holv */
+.project:nth-child(8)::after { top: 11%; left: -17%; } /* caribbean blue */
+.project:nth-child(9)::after { top: 45%; left: 131%; } /* corporeal */
+.project:nth-child(10)::after { top: -13%; left: 45%; } /* a2 milk */
 
 /* Mobile Styles (Responsive Design) */
+@media (max-width: 992px){
+    .project img{
+        max-width: 125px; /* Make images smaller on mobile */
+        max-height: 125px;
+    }
+
+    .project:hover::after{
+        font-size: 20px;
+    }
+}
+
 @media (max-width: 768px){
     .project img{
         max-width: 100px; /* Make images smaller on mobile */
@@ -208,8 +220,8 @@ img{
 
 @media (max-width: 480px){
     .project img{
-        max-width: 80px; /* Even smaller on smaller screens */
-        max-height: 80px;
+        max-width: 75px; /* Even smaller on smaller screens */
+        max-height: 75px;
     }
 
     .project:nth-child(1) { top: 5%; left: 5%; }
@@ -221,6 +233,10 @@ img{
     .project:nth-child(7) { top: 90%; left: 10%; }
     .project:nth-child(8) { top: 20%; left: 60%; }
     .project:nth-child(9) { top: 50%; left: 80%; }
+
+    .project:hover::after{
+        font-size: 12px;
+    }
 }
 
 .centre {
@@ -244,7 +260,7 @@ img{
 }
 
 /* Basic HTML and body setup */
-html,body{
+body{
     scroll-behavior: smooth;
     overscroll-behavior: none;
 }
