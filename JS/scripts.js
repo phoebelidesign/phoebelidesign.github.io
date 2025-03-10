@@ -64,3 +64,43 @@ audioChannel.addEventListener("message", (event) => {
 window.addEventListener("beforeunload", () => {
     localStorage.setItem("audioTime", audio.currentTime);
 });
+
+
+// Listen to a tune
+document.addEventListener("DOMContentLoaded", function () {
+    const tooltip = document.getElementById("tooltip");
+    const playPauseBtn = document.getElementById("playPauseBtn");
+
+    playPauseBtn.addEventListener("mouseenter", function () {
+        tooltip.style.opacity = "1"; // Show tooltip
+    });
+
+    playPauseBtn.addEventListener("mouseleave", function () {
+        tooltip.style.opacity = "0"; // Hide tooltip
+    });
+
+    playPauseBtn.addEventListener("mousemove", function (event) {
+        let tooltipWidth = tooltip.offsetWidth;
+        let tooltipHeight = tooltip.offsetHeight;
+        let pageWidth = window.innerWidth;
+        let pageHeight = window.innerHeight;
+        let offsetX = 10; // Space between mouse and tooltip
+        let offsetY = -5;
+
+        let posX = event.pageX + offsetX;
+        let posY = event.pageY + offsetY;
+
+        // Prevent tooltip from going off-screen (right)
+        if (posX + tooltipWidth > pageWidth) {
+            posX = event.pageX - tooltipWidth - offsetX;
+        }
+
+        // Prevent tooltip from going off-screen (bottom)
+        if (posY + tooltipHeight > pageHeight) {
+            posY = event.pageY - tooltipHeight - offsetY;
+        }
+
+        tooltip.style.left = `${posX}px`;
+        tooltip.style.top = `${posY}px`;
+    });
+});
