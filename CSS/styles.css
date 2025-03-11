@@ -293,18 +293,19 @@ ul{
     position: fixed;
     bottom: 3%;
     right: 3%;
-    color: lightgrey;
+    color: black;
     background-color: transparent;
     padding: 10px;
     border: none;
     border-radius: 50%;
     cursor: pointer;
-    font-size: 48px; /* Icon size */
+    font-size: 40px; /* Icon size */
     transition: color 0.2s ease;
 }
 
 .play-btn:hover{
     color: black;
+    opacity: 0.4;
 }
 
 .play-btn i{
@@ -315,7 +316,7 @@ ul{
     .play-btn{
         bottom: 5%;
         right: 5%;
-        font-size: 40px; /* Icon size */
+        font-size: 36px; /* Icon size */
     }
 }
 

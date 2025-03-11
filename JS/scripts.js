@@ -36,12 +36,6 @@ playPauseBtn.addEventListener("click", () => {
         localStorage.setItem("audioPlaying", "false");
         icon.classList.replace("fa-pause", "fa-play");
     }
-
-    // Broadcast state to other pages
-    audioChannel.postMessage({
-        action: audio.paused ? "pause" : "play",
-        time: audio.currentTime
-    });
 });
 
 // Listen for changes from other pages
@@ -66,7 +60,8 @@ window.addEventListener("beforeunload", () => {
 });
 
 
-// Listen to a tune
+
+// LISTEN TO A TUNE
 document.addEventListener("DOMContentLoaded", function () {
     const tooltip = document.getElementById("tooltip");
     const playPauseBtn = document.getElementById("playPauseBtn");
@@ -104,3 +99,4 @@ document.addEventListener("DOMContentLoaded", function () {
         tooltip.style.top = `${posY}px`;
     });
 });
+
