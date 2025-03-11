@@ -295,7 +295,7 @@ ul{
     right: 3%;
     color: black;
     background-color: transparent;
-    padding: 10px;
+    padding: 5px;
     border: none;
     border-radius: 50%;
     cursor: pointer;
@@ -344,7 +344,7 @@ ul{
     position: fixed;
     bottom: 3%;
     left: 3%;
-    font-size: 4em;
+    font-size: 3.5em;
     font-weight: 550;
     color: black;
     font-family: Helvetica, Arial, sans-serif;
@@ -363,7 +363,7 @@ ul{
 /* Mobile Styles (Responsive Design) */
 @media (max-width: 768px){
     .home-link{
-        font-size: 3.5em; /* Smaller font size for tablets and below */
+        font-size: 3em; /* Smaller font size for tablets and below */
         bottom: 5%; /* Slightly adjust position */
         left: 5%;   /* Slightly adjust position */
     }
@@ -371,7 +371,7 @@ ul{
 
 @media (max-width: 480px){
     .home-link{
-        font-size: 3em; /* Even smaller font size for mobile phones */
+        font-size: 2.5em; /* Even smaller font size for mobile phones */
         bottom: 5%; /* Adjust position for smaller screens */
         left: 5%;   /* Adjust position for smaller screens */
     }

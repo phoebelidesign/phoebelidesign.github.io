@@ -59,7 +59,46 @@ window.addEventListener("beforeunload", () => {
     localStorage.setItem("audioTime", audio.currentTime);
 });
 
+// OTHER THUMBNAILS ON THUMBNAIL HOVER
+document.addEventListener("DOMContentLoaded", function () {
+    const projects = document.querySelectorAll(".project");
 
+    projects.forEach(project => {
+        project.addEventListener("mouseenter", function () {
+            projects.forEach(p => {
+                if (p !== this) {
+                    p.style.opacity = "0"; // Makes other thumbnails fade
+                    p.style.pointerEvents = "none"; // Disables interactions
+                }
+            });
+        });
+
+        project.addEventListener("mouseleave", function () {
+            projects.forEach(p => {
+                p.style.opacity = "1"; // Restore visibility
+                p.style.pointerEvents = "auto";
+            });
+        });
+    });
+});
+
+// BACKGROUND ON THUMBNAIL HOVER
+document.addEventListener("DOMContentLoaded", function () {
+    const projects = document.querySelectorAll(".project");
+
+    projects.forEach(project => {
+        project.addEventListener("mouseenter", function () {
+            let imgSrc = this.querySelector("img").src;
+            let bgImage = imgSrc.replace("_thumbnail", "_bg"); // Adjust this to match your naming convention
+
+            document.body.style.backgroundImage = `url(${bgImage})`;
+        });
+
+        project.addEventListener("mouseleave", function () {
+            document.body.style.backgroundImage = "url('Assets/Images/default_bg.png')";
+        });
+    });
+});
 
 // LISTEN TO A TUNE
 document.addEventListener("DOMContentLoaded", function () {
