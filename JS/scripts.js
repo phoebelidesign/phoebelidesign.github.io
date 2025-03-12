@@ -59,7 +59,34 @@ window.addEventListener("beforeunload", () => {
     localStorage.setItem("audioTime", audio.currentTime);
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    const projects = document.querySelectorAll(".project");
 
+    projects.forEach(project => {
+        project.addEventListener("mouseenter", function () {
+            let imgSrc = this.querySelector("img").src;
+            let bgImage = imgSrc.replace("_thumbnail", "_bg"); // Adjust naming if needed
+
+            document.body.style.backgroundImage = `url(${bgImage})`;
+
+            projects.forEach(p => {
+                if (p !== this) {
+                    p.style.opacity = "0"; // Fade out other thumbnails
+                    p.style.pointerEvents = "none"; // Disable interaction
+                }
+            });
+        });
+
+        project.addEventListener("mouseleave", function () {
+            document.body.style.backgroundImage = "none";
+
+            projects.forEach(p => {
+                p.style.opacity = "1"; // Restore thumbnails
+                p.style.pointerEvents = "auto";
+            });
+        });
+    });
+});
 
 // LISTEN TO A TUNE
 document.addEventListener("DOMContentLoaded", function () {

@@ -128,6 +128,26 @@ a:hover{
 }
 
 /************************************* HOME *******************************************/
+
+/* Basic HTML and body setup */
+body{
+    scroll-behavior: smooth;
+    overscroll-behavior: none;
+    background: url('../Assets/Images/default_bg.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+body,ul{
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+ul{
+    list-style: none;
+}
+
 main{
     height: auto;
 }
@@ -147,7 +167,7 @@ img{
     position: absolute;
     opacity: 1;
     cursor: pointer;
-    transition: transform 0.2s ease;
+    transition: transform 0.3s ease-in-out;
 }
 
 .project img{
@@ -156,13 +176,13 @@ img{
     width: auto;
     height: auto;
     object-fit: contain; /* Maintain aspect ratio while fitting the image inside the box */
-    transition: transform 0.2s ease;
+    transition: transform 0.3s ease;
 }
 
 /* Image on hover */
 .project:hover{
     transform: scale(0.95);
-    opacity: 0.9;
+    opacity: 1;
 }
 
 /* Caption */
@@ -171,7 +191,7 @@ img{
     position: absolute;
     transform: translate(-50%, -50%);
     color: black;
-    opacity: 1;
+    opacity: 0;
     font-size: 24px;
     font-family: Helvetica, Arial, sans-serif;
     white-space: nowrap; /* Prevent the text from wrapping */
@@ -263,25 +283,6 @@ img{
     .centre{
         width: 75%;
     }
-}
-
-/* Basic HTML and body setup */
-body{
-    scroll-behavior: smooth;
-    overscroll-behavior: none;
-    background: url('Assets/Images/default-bg.jpg') no-repeat center center fixed;
-    background-size: cover;
-}
-
-body,ul{
-    overflow-x: hidden;
-    margin: 0;
-    padding: 0;
-    height: 100%;
-}
-
-ul{
-    list-style: none;
 }
 
 /* Position the play/pause button in the bottom right corner */
