@@ -403,6 +403,7 @@ img{
   
 .navbar li a:hover{
     opacity: 0.4;
+    text-decoration: underline;
 }
 
 /* Left and Right Alignment */
