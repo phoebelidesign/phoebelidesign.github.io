@@ -59,6 +59,7 @@ window.addEventListener("beforeunload", () => {
     localStorage.setItem("audioTime", audio.currentTime);
 });
 
+// Bg image on hover
 document.addEventListener("DOMContentLoaded", function () {
     const projects = document.querySelectorAll(".project");
 

@@ -133,7 +133,7 @@ a:hover{
 body{
     scroll-behavior: smooth;
     overscroll-behavior: none;
-    background: url('../Assets/Images/default_bg.png') no-repeat center center fixed;
+    background: none no-repeat center center fixed;
     background-size: cover;
 }
 
@@ -392,7 +392,7 @@ img{
 /* Menu Styling */
 .navbar ul{
     display: flex; /* Make menu items appear in a row */
-    gap: 30px;
+    gap: 50px;
 }
   
 .navbar li a{
