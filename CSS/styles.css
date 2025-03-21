@@ -26,6 +26,10 @@ p{ /* about, contact. project descriptions */
     font-weight: 200;
 }
 
+#tooltip {
+    font-size: small !important;
+}
+
 .lineheight{ /* black star ★ emoji */
     line-height: 1;
     vertical-align: middle;
