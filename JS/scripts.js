@@ -107,8 +107,8 @@ document.addEventListener("DOMContentLoaded", function () {
         let tooltipHeight = tooltip.offsetHeight;
         let pageWidth = window.innerWidth;
         let pageHeight = window.innerHeight;
-        let offsetX = 10; // Space between mouse and tooltip
-        let offsetY = -5;
+        let offsetX = -45; // Space between mouse and tooltip
+        let offsetY = 10;
 
         let posX = event.pageX + offsetX;
         let posY = event.pageY + offsetY;
@@ -127,4 +127,3 @@ document.addEventListener("DOMContentLoaded", function () {
         tooltip.style.top = `${posY}px`;
     });
 });
-

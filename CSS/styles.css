@@ -285,6 +285,16 @@ img{
     }
 }
 
+/* new play/pause btn */
+.playPauseBtn{
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: transparent;
+    padding: 5px;
+    position: fixed;
+}
+
 /* Position the play/pause button in the bottom right corner */
 .audio-container{
     position: relative;
@@ -306,7 +316,7 @@ img{
 
 .play-btn:hover{
     color: black;
-    opacity: 0.4;
+    opacity: 0.5;
 }
 
 .play-btn i{
@@ -354,7 +364,7 @@ img{
 }
 
 .home-link:hover{
-    opacity: 0.4;
+    opacity: 0.5;
 }
 
 .home-link.inactive{
@@ -383,7 +393,7 @@ img{
     display: flex;
     justify-content: space-between; /* Space between left and right menus */
     align-items: center; /* Center items vertically */
-    padding: 30px 50px;
+    padding: 30px 70px 30px 50px;
     position: sticky;
     top: 0; /* Stick the navbar to the top of the viewport */
     z-index: 1000; /* Ensure it stays above other content */
@@ -402,7 +412,7 @@ img{
 }
   
 .navbar li a:hover{
-    opacity: 0.4;
+    opacity: 1;
     text-decoration: underline;
 }
 
