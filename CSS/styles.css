@@ -2,7 +2,7 @@
 
 h1,h2,h3,h4,p{
     font-family: Helvetica, Arial, sans-serif;
-    padding-left: 10%;
+    padding-left: 50px;
     padding-right: 10%;
 }
 
@@ -87,48 +87,6 @@ a:hover{
         padding-left: 7%;
         padding-right: 7%;
     }
-}
-
-/************************************* INTRO VIDEO OVERLAY *******************************************/
-#intro-overlay{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    z-index: 1000;
-}
-
-#intro-video{
-    width: 100%;
-    height: auto;
-    max-height: 100vh;
-    object-fit: cover;
-}
-
-/* Skip Button */
-#skip-button{
-    position: absolute;
-    bottom: 50%;
-    background: none;
-    color: black;
-    border: none;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-#skip-button:hover{
-    color: rgba(0, 0, 0, 0.4);
-}
-
-/* Hide Main Content Initially */
-.hidden{
-    display: none;
 }
 
 /************************************* HOME *******************************************/
@@ -357,8 +315,8 @@ img{
 /* Home link */
 .home-link{
     position: fixed;
-    bottom: 3%;
-    left: 3%;
+    bottom: 30px;
+    left: 50px;
     font-size: 3.5em;
     font-weight: 550;
     color: black;
@@ -379,16 +337,18 @@ img{
 @media (max-width: 768px){
     .home-link{
         font-size: 3em; /* Smaller font size for tablets and below */
-        bottom: 5%; /* Slightly adjust position */
-        left: 5%;   /* Slightly adjust position */
     }
 }
 
 @media (max-width: 480px){
     .home-link{
         font-size: 2.5em; /* Even smaller font size for mobile phones */
-        bottom: 5%; /* Adjust position for smaller screens */
-        left: 5%;   /* Adjust position for smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .hide-on-mobile {
+        display: none !important;
     }
 }
 
@@ -439,7 +399,8 @@ img{
     display: flex;
     align-items: flex-start;
     position: relative;
-    padding-right: 3%;
+    padding-left: 0px;
+    padding-right: 50px;
 }
 
 .text-section{
@@ -449,9 +410,9 @@ img{
 }
 
 .image-section{
-    width: 65%; /* Adjust width as needed */
+    width: 65%;
     overflow-y: visible;
-    padding-bottom: 2%;
+    padding-bottom: 0px;
 }
 
 .image-section img{
@@ -485,19 +446,21 @@ img{
 @media (max-width: 992px){
     .project-page{
         flex-direction: column; /* Stack sections */
+        padding-left: 0;
         padding-right: 0;
     }
 
     .text-section{
         width: 100%;
         position: static; /* Remove sticky so it scrolls normally */
+        padding-top: 2%;
         padding-bottom: 5%; /* Add some padding */
         text-align: center;
     }
 
     .image-section{
         width: 100%;
-        padding-bottom: 20%;
+        padding-bottom: 0px;
     }
 }
 
@@ -540,6 +503,61 @@ footer {
     }   
 }
 
+#tooltip {
+    position: absolute;
+    color: black;
+    padding: 5px;
+    font-family: "Helvetica", Arial, sans-serif;
+    font-size: 16px;
+    border-radius: 0px;
+    pointer-events: none; /* Prevents interaction */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.2s ease-in-out;
+    white-space: nowrap; /* Prevents line breaks */
+}
+
+/************************************* INTRO VIDEO OVERLAY (NOT IN USE) *******************************************/
+#intro-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1000;
+}
+
+#intro-video{
+    width: 100%;
+    height: auto;
+    max-height: 100vh;
+    object-fit: cover;
+}
+
+/* Skip Button */
+#skip-button{
+    position: absolute;
+    bottom: 50%;
+    background: none;
+    color: black;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#skip-button:hover{
+    color: rgba(0, 0, 0, 0.4);
+}
+
+/* Hide Main Content Initially */
+.hidden{
+    display: none;
+}
+
  /*
 // Intro video overlay
 document.addEventListener("DOMContentLoaded", function () {
@@ -567,16 +585,3 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 */
-
-#tooltip {
-    position: absolute;
-    color: black;
-    padding: 5px;
-    font-family: "Helvetica", Arial, sans-serif;
-    font-size: 16px;
-    border-radius: 0px;
-    pointer-events: none; /* Prevents interaction */
-    opacity: 0; /* Initially hidden */
-    transition: opacity 0.2s ease-in-out;
-    white-space: nowrap; /* Prevents line breaks */
-}

@@ -59,34 +59,40 @@ window.addEventListener("beforeunload", () => {
     localStorage.setItem("audioTime", audio.currentTime);
 });
 
-// Bg image on hover
+// BACKGROUND IMAGE ON HOVER
 document.addEventListener("DOMContentLoaded", function () {
     const projects = document.querySelectorAll(".project");
 
-    projects.forEach(project => {
-        project.addEventListener("mouseenter", function () {
-            let imgSrc = this.querySelector("img").src;
-            let bgImage = imgSrc.replace("_thumbnail", "_bg"); // Adjust naming if needed
+    // Detect if device is touch/mobile
+    const isMobile = window.innerWidth <= 768;
 
-            document.body.style.backgroundImage = `url(${bgImage})`;
-
-            projects.forEach(p => {
-                if (p !== this) {
-                    p.style.opacity = "0"; // Fade out other thumbnails
-                    p.style.pointerEvents = "none"; // Disable interaction
-                }
+    // Only apply hover logic on non-mobile devices
+    if (!isMobile) {
+        projects.forEach(project => {
+            project.addEventListener("mouseenter", function () {
+                let imgSrc = this.querySelector("img").src;
+                let bgImage = imgSrc.replace("_thumbnail", "_bg"); // Adjust naming if needed
+    
+                document.body.style.backgroundImage = `url(${bgImage})`;
+    
+                projects.forEach(p => {
+                    if (p !== this) {
+                        p.style.opacity = "0"; // Fade out other thumbnails
+                        p.style.pointerEvents = "none"; // Disable interaction
+                    }
+                });
+            });
+    
+            project.addEventListener("mouseleave", function () {
+                document.body.style.backgroundImage = "none";
+    
+                projects.forEach(p => {
+                    p.style.opacity = "1"; // Restore thumbnails
+                    p.style.pointerEvents = "auto";
+                });
             });
         });
-
-        project.addEventListener("mouseleave", function () {
-            document.body.style.backgroundImage = "none";
-
-            projects.forEach(p => {
-                p.style.opacity = "1"; // Restore thumbnails
-                p.style.pointerEvents = "auto";
-            });
-        });
-    });
+    }
 });
 
 // LISTEN TO A TUNE
@@ -126,4 +132,14 @@ document.addEventListener("DOMContentLoaded", function () {
         tooltip.style.left = `${posX}px`;
         tooltip.style.top = `${posY}px`;
     });
+});
+
+//DETECT PROJECT PAGES TO HIDE HOMELINK
+document.addEventListener("DOMContentLoaded", function () {
+    const homeLink = document.querySelector(".home-link");
+    const isProjectPage = window.location.pathname.includes("/Work/");
+
+    if (homeLink && isProjectPage && window.innerWidth <= 768) {
+        homeLink.classList.add("hide-on-mobile");
+    }
 });
