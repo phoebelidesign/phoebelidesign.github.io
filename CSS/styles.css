@@ -1,7 +1,6 @@
 /************************************* TEXT *******************************************/
-
 h1,h2,h3,h4,p{
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: helvetica-neue-lt-pro, Helvetica, Arial, sans-serif;
     padding-left: 50px;
     padding-right: 10%;
 }
@@ -16,14 +15,14 @@ h1{ /* project headings */
 
 h2{ /* project subheading */
     font-size: large;
-    font-weight: 200;
+    font-weight: 300;
     font-style: italic;
-    margin-top: 5px;
+    margin-top: 3px;
 }
 
 p{ /* about, contact. project descriptions */
-    font-size: medium;
-    font-weight: 200;
+    font-size: large;
+    font-weight: 300;
 }
 
 #tooltip {
@@ -40,7 +39,7 @@ p{ /* about, contact. project descriptions */
 h4{ /* copyright */
     text-align: center;
     font-size: small;
-    font-weight: 200;
+    font-weight: 300;
 }
 
 a{
@@ -318,10 +317,10 @@ img{
     bottom: 30px;
     left: 50px;
     font-size: 3.5em;
-    font-weight: 550;
+    font-weight: 500;
     color: black;
-    font-family: Helvetica, Arial, sans-serif;
-    letter-spacing: -2px;
+    font-family: helvetica-neue-lt-pro, Helvetica, Arial, sans-serif;
+    letter-spacing: -2.5px;
     z-index: 9999;
 }
 
@@ -372,7 +371,7 @@ img{
 .navbar li a{
     text-decoration: none;
     color: black;
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: helvetica-neue-lt-pro, Helvetica, Arial, sans-serif;
 }
   
 .navbar li a:hover{
