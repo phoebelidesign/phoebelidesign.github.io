@@ -406,6 +406,22 @@ img{
 }
   
 /* Menu Styling */
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.navbar-icon {
+    width: 1em;
+    height: 1em;
+    object-fit: contain;
+    vertical-align: middle;
+}
+
+.navbar-icon:hover {
+    animation: spin 1s linear infinite;
+}
+
 .navbar ul{
     display: flex; /* Make menu items appear in a row */
     gap: 50px;
