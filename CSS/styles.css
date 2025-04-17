@@ -357,10 +357,16 @@ img{
         font-size: 6em;
         letter-spacing: -4px;
     }
+    .page-title{
+        display: none;
+    }
 }
 @media (max-width: 768px){
     .home-link{
         font-size: 4.5em;
+    }
+    .page-title{
+        display: none;
     }
 }
 
@@ -368,6 +374,9 @@ img{
     .home-link{
         font-size: 3em;
         letter-spacing: -2.5px;
+    }
+    .page-title{
+        display: none;
     }
 }
 

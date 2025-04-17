@@ -143,3 +143,29 @@ document.addEventListener("DOMContentLoaded", function () {
         homeLink.classList.add("hide-on-mobile");
     }
 });
+
+//filter
+document.addEventListener("DOMContentLoaded", function () {
+    const projects = document.querySelectorAll(".project");
+    const filterButtons = document.querySelectorAll(".filter-btn");
+    const pageTitle = document.getElementById("page-title");
+
+    //update page-title by filter
+    filterButtons.forEach(button => {
+        button.addEventListener("click", function () {
+            const selectedCategory = this.dataset.category;
+
+            // Update visible projects
+            projects.forEach(project => {
+                const categories = project.dataset.category.split(" ");
+                project.style.display = (selectedCategory === "all" || categories.includes(selectedCategory))
+                    ? "block"
+                    : "none";
+            });
+
+            // Update the page title text
+            pageTitle.textContent = `: ${selectedCategory}`;
+        });
+    });
+
+});
