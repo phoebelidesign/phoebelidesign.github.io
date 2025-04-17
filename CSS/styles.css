@@ -353,15 +353,23 @@ img{
     }
 }
 
-/* Navbar Styling */
+/* NAVBAR Styling */
 .navbar{
     display: flex;
-    justify-content: space-between; /* Space between left and right menus */
     align-items: center; /* Center items vertically */
     padding: 30px 70px 30px 50px;
     position: sticky;
     top: 0; /* Stick the navbar to the top of the viewport */
     z-index: 1000; /* Ensure it stays above other content */
+}
+
+.navbar-menu{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
 }
   
 /* Menu Styling */
@@ -381,6 +389,10 @@ img{
     text-decoration: underline;
 }
 
+.navbar .active{
+    text-decoration: underline;
+}
+
 /* Left and Right Alignment */
 .menu-left{
     margin-right: auto; /* Push the right menu to the opposite side */
@@ -388,10 +400,6 @@ img{
 
 .menu-right{
     margin-left: auto; /* Ensure it stays to the right */
-}
-
-.navbar .active{
-    text-decoration: underline;
 }
 
 /************************************* PROJECTS *******************************************/
