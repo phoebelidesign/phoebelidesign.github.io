@@ -172,3 +172,31 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+//Filter buttons to act like normal navigation links, but also filter
+document.addEventListener("DOMContentLoaded", function () {
+    const projects = document.querySelectorAll(".project");
+    const pageTitle = document.getElementById("page-title");
+    const urlParams = new URLSearchParams(window.location.search);
+    const selectedCategory = urlParams.get("category");
+
+    if (selectedCategory) {
+        // Show only matching projects
+        projects.forEach(project => {
+            const categories = project.dataset.category.split(" ");
+            project.style.display = (selectedCategory === "all" || categories.includes(selectedCategory))
+                ? "block"
+                : "none";
+        });
+
+        // Update title
+        pageTitle.textContent = `: ${selectedCategory}`;
+
+        // Highlight active nav item (optional)
+        const activeLink = document.querySelector(`.filter-link[href*="${selectedCategory}"]`);
+        if (activeLink) {
+            document.querySelectorAll(".filter-link").forEach(link => link.classList.remove("active"));
+            activeLink.classList.add("active");
+        }
+    }
+});
