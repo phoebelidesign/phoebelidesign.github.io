@@ -56,11 +56,6 @@ a:hover{
     margin-bottom: 50px;
 }
 
-.pages p{
-    padding-left: 3%;
-    padding-right: 3%;
-}
-
 /* Target blank icon */
 .pages a[target="_blank"]:after{
     content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVR42qXKwQkAIAxDUUdxtO6/RBQkQZvSi8I/pL4BoGw/XPkh4XigPmsUgh0626AjRsgxHTkUThsG2T/sIlzdTsp52kSS1wAAAABJRU5ErkJggg==);
@@ -71,21 +66,11 @@ a:hover{
     .pages{
         margin-bottom: 125px;
     }
-
-    .pages p{
-        padding-left: 5%;
-        padding-right: 5%;
-    }
 }
 
 @media (max-width: 480px){
     .pages{
         margin-bottom: 150px;
-    }
-
-    .pages p{
-        padding-left: 7%;
-        padding-right: 7%;
     }
 }
 
@@ -431,6 +416,7 @@ img{
     text-decoration: none;
     color: black;
     font-family: Helvetica, Arial, sans-serif;
+    white-space: nowrap;
 }
   
 .navbar li a:hover{
@@ -454,6 +440,7 @@ img{
     text-decoration: none;
     cursor: pointer;
     transition: opacity 0.3s ease;
+    white-space: nowrap;
 }
 
 /* Match hover effect */
