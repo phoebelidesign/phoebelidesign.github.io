@@ -317,13 +317,13 @@ img{
     position: fixed;
     bottom: 30px;
     left: 50px;
-    width: 100%;
     font-size: 7em;
     font-weight: normal;
     color: black;
     font-family: Helvetica, Arial, sans-serif;
     letter-spacing: -5px;
     z-index: 9999;
+    white-space: nowrap;
 }
 
 .home-link:hover{
@@ -334,16 +334,40 @@ img{
     pointer-events: none;
 }
 
+.page-title{
+    position: fixed;
+    bottom: 30px;
+    right: 50px;
+    font-size: 7em;
+    font-weight: normal;
+    color: black;
+    font-family: Helvetica, Arial, sans-serif;
+    letter-spacing: -5px;
+    z-index: 9999;
+    white-space: nowrap;
+}
+
+.page-title.inactive{
+    pointer-events: none;
+}
+
 /* Mobile Styles (Responsive Design) */
+@media (max-width: 992px){
+    .home-link{
+        font-size: 6em;
+        letter-spacing: -4px;
+    }
+}
 @media (max-width: 768px){
     .home-link{
-        font-size: 3em; /* Smaller font size for tablets and below */
+        font-size: 4.5em;
     }
 }
 
 @media (max-width: 480px){
     .home-link{
-        font-size: 2.5em; /* Even smaller font size for mobile phones */
+        font-size: 3em;
+        letter-spacing: -2.5px;
     }
 }
 
