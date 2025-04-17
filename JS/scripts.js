@@ -163,9 +163,12 @@ document.addEventListener("DOMContentLoaded", function () {
                     : "none";
             });
 
-            // Update the page title text
+            // Update page title text
             pageTitle.textContent = `: ${selectedCategory}`;
+
+            // Underline active filter
+            filterButtons.forEach(btn => btn.classList.remove("active"));
+            this.classList.add("active");
         });
     });
-
 });

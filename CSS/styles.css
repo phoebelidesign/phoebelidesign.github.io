@@ -426,7 +426,32 @@ img{
     text-decoration: underline;
 }
 
-/* Left and Right Alignment */
+/* Match button style to navbar links */
+.navbar li button.filter-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    color: black;
+    font-family: Helvetica, Arial, sans-serif;
+    text-decoration: none;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+/* Match hover effect */
+.navbar li button.filter-btn:hover {
+    text-decoration: underline;
+    opacity: 1;
+}
+
+/* Optional: indicate active filter */
+.navbar li button.filter-btn.active {
+    text-decoration: underline;
+}
+
+/* NOT IN USE --- Left and Right Alignment */
 .menu-left{
     margin-right: auto; /* Push the right menu to the opposite side */
 }
