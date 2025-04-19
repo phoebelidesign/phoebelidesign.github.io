@@ -298,10 +298,9 @@ img{
 /************************************* NAVBAR *******************************************/
 
 /* Home link */
-.home-link{
+.home-link, .page-title{
     position: fixed;
     bottom: 30px;
-    left: 50px;
     font-size: 7em;
     font-weight: normal;
     color: black;
@@ -309,76 +308,143 @@ img{
     letter-spacing: -5px;
     z-index: 9999;
     white-space: nowrap;
+}
+
+.home-link{
+    left: 50px
+}
+
+.page-title{
+    right: 50px
 }
 
 .home-link:hover{
     opacity: 0.5;
 }
 
-.home-link.inactive{
-    pointer-events: none;
-}
-
-.page-title{
-    position: fixed;
-    bottom: 30px;
-    right: 50px;
-    font-size: 7em;
-    font-weight: normal;
-    color: black;
-    font-family: Helvetica, Arial, sans-serif;
-    letter-spacing: -5px;
-    z-index: 9999;
-    white-space: nowrap;
-}
-
-.page-title.inactive{
+.home-link.inactive, .page-title.inactive{
     pointer-events: none;
 }
 
 /* Mobile Styles (Responsive Design) */
-@media (max-width: 992px){
+@media (max-width: 1136px){
+    .home-link{
+        font-size: 6.5em;
+        letter-spacing: -4.5px;
+    }
+    .page-title{
+        font-size: 6.5em;
+        letter-spacing: -4.5px;
+    }
+}
+
+@media (max-width: 1065px){
     .home-link{
         font-size: 6em;
         letter-spacing: -4px;
     }
     .page-title{
-        display: none;
+        font-size: 6em;
+        letter-spacing: -4px;
     }
 }
-@media (max-width: 768px){
+
+@media (max-width: 992px){
     .home-link{
-        font-size: 4.5em;
+        font-size: 5.5em;
     }
     .page-title{
-        display: none;
+        font-size: 5.5em;
+    }
+}
+
+@media (max-width: 912px){
+    .home-link{
+        font-size: 5em;
+        letter-spacing: -3.5px;
+    }
+    .page-title{
+        font-size: 5em;
+        letter-spacing: -3.5px;
+    }
+}
+
+@media (max-width: 840px){
+    .home-link{
+        font-size: 4.5em;
+        letter-spacing: -3px;
+    }
+    .page-title{
+        font-size: 4.5em;
+        letter-spacing: -3px;
+    }
+}
+
+@media (max-width: 768px){
+    .home-link{
+        font-size: 4em;
+        letter-spacing: -2.5px;
+    }
+    .page-title{
+        font-size: 4em;
+        letter-spacing: -2.5px;
+    }
+}
+
+@media (max-width: 698px){
+    .home-link{
+        font-size: 3.5em;
+    }
+    .page-title{
+        font-size: 3.5em;
+    }
+}
+
+@media (max-width: 618px){
+    .home-link{
+        font-size: 3em;
+        letter-spacing: -2px;
+    }
+    .page-title{
+        font-size: 3em;
+        letter-spacing: -2px;
+    }
+}
+
+@media (max-width: 548px){
+    .home-link{
+        font-size: 2.5em;
+        letter-spacing: -1.5px;
+    }
+    .page-title{
+        font-size: 2.5em;
+        letter-spacing: -1.5px;
     }
 }
 
 @media (max-width: 480px){
     .home-link{
-        font-size: 3em;
-        letter-spacing: -2.5px;
+        font-size: 2em;
+        letter-spacing: -1px;
     }
     .page-title{
-        display: none;
+        font-size: 2em;
+        letter-spacing: -1px;
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px){
     .hide-on-mobile {
         display: none !important;
     }
 }
 
-/* NAVBAR Styling */
+/* NAVBAR  STYLING*/
 .navbar{
-    display: flex;
-    align-items: center; /* Center items vertically */
     padding: 30px 70px 30px 50px;
     position: sticky;
-    top: 0; /* Stick the navbar to the top of the viewport */
-    z-index: 1000; /* Ensure it stays above other content */
+    top: 0;
+    z-index: 1000;
 }
 
 .navbar-menu{
@@ -390,7 +456,6 @@ img{
     width: 100%;
 }
   
-/* Menu Styling */
 @keyframes spin {
     from { transform: rotate(0deg); }
     to { transform: rotate(360deg); }
@@ -408,8 +473,7 @@ img{
 }
 
 .navbar ul{
-    display: flex; /* Make menu items appear in a row */
-    gap: 50px;
+    display: flex;
 }
   
 .navbar li a{
@@ -420,8 +484,8 @@ img{
 }
   
 .navbar li a:hover{
-    opacity: 1;
     text-decoration: underline;
+    opacity: 1;
 }
 
 .navbar .active{
@@ -443,24 +507,13 @@ img{
     white-space: nowrap;
 }
 
-/* Match hover effect */
 .navbar li button.filter-btn:hover {
     text-decoration: underline;
     opacity: 1;
 }
 
-/* Optional: indicate active filter */
 .navbar li button.filter-btn.active {
     text-decoration: underline;
-}
-
-/* NOT IN USE --- Left and Right Alignment */
-.menu-left{
-    margin-right: auto; /* Push the right menu to the opposite side */
-}
-
-.menu-right{
-    margin-left: auto; /* Ensure it stays to the right */
 }
 
 /************************************* PROJECTS *******************************************/
