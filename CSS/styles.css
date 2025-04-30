@@ -119,6 +119,7 @@ img{
 
 .project{
     position: absolute;
+    transform: translate(-50%, -50%);
     opacity: 1;
     cursor: pointer;
     transition: transform 0.2s ease-in-out;
@@ -129,13 +130,12 @@ img{
     max-height: 150px;
     width: auto;
     height: auto;
-    transform: translate(-50%, -50%);
     object-fit: contain; /* Maintain aspect ratio while fitting the image inside the box */
     transition: transform 0.2s ease-in-out;
 }
 
 .project:hover{
-    transform: scale(0.95) translate(-2%, -2%);
+    transform: scale(0.95) translate(-52%, -52%);
     opacity: 1;
 }
 
@@ -158,26 +158,6 @@ img{
     .project img{
         max-width: 75px; /* Even smaller on smaller screens */
         max-height: 75px;
-    }
-}
-
-.centre {
-    position: absolute;
-    top: 45%;
-    left: 50%;
-    width: 25%;
-    transform: translate(-50%, -50%);
-}
-
-@media (max-width: 768px){
-    .centre{
-        width: 50%;
-    } 
-}
-
-@media (max-width: 480px){
-    .centre{
-        width: 75%;
     }
 }
 
@@ -309,17 +289,6 @@ img{
 }
 
 @media (max-width: 480px){
-    .home-link{
-        font-size: 2em;
-        letter-spacing: -1px;
-    }
-    .page-title{
-        font-size: 2em;
-        letter-spacing: -1px;
-    }
-}
-
-@media (max-width: 416px){
     .page-title{
         display: none;
     }
@@ -333,7 +302,7 @@ img{
 
 /* NAVBAR  STYLING */
 .navbar{
-    padding: 30px 70px 30px 50px;
+    padding: 30px 50px;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -385,7 +354,7 @@ img{
 }
 
 /* Match button style to navbar links */
-.navbar li button.filter-btn {
+.navbar li button.filter-btn{
     background: none;
     border: none;
     padding: 0;
@@ -398,12 +367,12 @@ img{
     white-space: nowrap;
 }
 
-.navbar li button.filter-btn:hover {
+.navbar li button.filter-btn:hover{
     text-decoration: underline;
     opacity: 1;
 }
 
-.navbar li button.filter-btn.active {
+.navbar li button.filter-btn.active{
     text-decoration: underline;
 }
 
@@ -412,12 +381,11 @@ img{
     border-radius: 50%;
     cursor: pointer;
     background-color: transparent;
-    padding: 5px;
-    position: fixed;
+    padding: 3px;
 }
 
 @media (max-width:480px){
-    .playPauseBtn{
+    .filter-btn{
         display: none;
     }
 }
