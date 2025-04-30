@@ -18,7 +18,7 @@ h2{ /* project subheading */
     font-size: 1.1em;
     font-weight: lighter;
     font-style: italic;
-    margin-top: 5px;
+    margin-top: 10px;
 }
 
 p{ /* about, contact. project descriptions */
@@ -58,7 +58,7 @@ a:hover{
 
 @media (max-width: 1024px){
     .pages{
-        margin-bottom: 150px;
+        margin-bottom: 100px;
     }
 
     .pages h1{
@@ -71,13 +71,14 @@ a:hover{
     .pages h1{
         font-size: 1.5em;
         font-weight: lighter;
-        line-height: 1.05;
+        line-height: 1.1;
     }
 }
 
 @media (max-width: 480px){
     .pages h1{
-        font-size: 1.2em;
+        font-size: 1.25em;
+        letter-spacing: -0.25px;
     }
 }
 
@@ -193,7 +194,7 @@ img{
 }
 
 /* Home link (Responsive Design) */
-@media (max-width: 1136px){
+@media (max-width: 1156px){
     .home-link{
         font-size: 6.5em;
         letter-spacing: -4.5px;
@@ -204,7 +205,7 @@ img{
     }
 }
 
-@media (max-width: 1065px){
+@media (max-width: 1085px){
     .home-link{
         font-size: 6em;
         letter-spacing: -4px;
@@ -215,7 +216,7 @@ img{
     }
 }
 
-@media (max-width: 992px){
+@media (max-width: 1012px){
     .home-link{
         font-size: 5.5em;
     }
@@ -224,7 +225,7 @@ img{
     }
 }
 
-@media (max-width: 912px){
+@media (max-width: 932px){
     .home-link{
         font-size: 5em;
         letter-spacing: -3.5px;
@@ -235,7 +236,7 @@ img{
     }
 }
 
-@media (max-width: 840px){
+@media (max-width: 860px){
     .home-link{
         font-size: 4.5em;
         letter-spacing: -3px;
@@ -246,7 +247,7 @@ img{
     }
 }
 
-@media (max-width: 768px){
+@media (max-width: 788px){
     .home-link{
         font-size: 4em;
         letter-spacing: -2.5px;
@@ -257,7 +258,7 @@ img{
     }
 }
 
-@media (max-width: 698px){
+@media (max-width: 718px){
     .home-link{
         font-size: 3.5em;
     }
@@ -266,7 +267,7 @@ img{
     }
 }
 
-@media (max-width: 618px){
+@media (max-width: 638px){
     .home-link{
         font-size: 3em;
         letter-spacing: -2px;
@@ -277,18 +278,7 @@ img{
     }
 }
 
-@media (max-width: 548px){
-    .home-link{
-        font-size: 2.5em;
-        letter-spacing: -1.5px;
-    }
-    .page-title{
-        font-size: 2.5em;
-        letter-spacing: -1.5px;
-    }
-}
-
-@media (max-width: 480px){
+@media (max-width: 562px){
     .page-title{
         display: none;
     }
@@ -302,7 +292,7 @@ img{
 
 /* NAVBAR  STYLING */
 .navbar{
-    padding: 30px 50px;
+    padding: 30px 70px 30px 50px;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -382,6 +372,7 @@ img{
     cursor: pointer;
     background-color: transparent;
     padding: 3px;
+    position: fixed;
 }
 
 @media (max-width:480px){
