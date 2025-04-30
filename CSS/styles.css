@@ -70,7 +70,8 @@ a:hover{
 @media (max-width: 768px){
     .pages h1{
         font-size: 1.5em;
-        letter-spacing: -0.25px;
+        font-weight: lighter;
+        line-height: 1.05;
     }
 }
 
@@ -451,7 +452,6 @@ img{
     font-family: Helvetica, Arial, sans-serif;
     text-decoration: none;
     cursor: pointer;
-    transition: 0.3s ease;
     white-space: nowrap;
 }
 
