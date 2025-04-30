@@ -121,7 +121,7 @@ img{
     position: absolute;
     opacity: 1;
     cursor: pointer;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.2s ease-in-out;
 }
 
 .project img{
@@ -129,12 +129,13 @@ img{
     max-height: 150px;
     width: auto;
     height: auto;
+    transform: translate(-50%, -50%);
     object-fit: contain; /* Maintain aspect ratio while fitting the image inside the box */
-    transition: transform 0.3s ease;
+    transition: transform 0.2s ease-in-out;
 }
 
 .project:hover{
-    transform: scale(0.95);
+    transform: scale(0.95) translate(-2%, -2%);
     opacity: 1;
 }
 
@@ -144,10 +145,6 @@ img{
         max-width: 125px; /* Make images smaller on mobile */
         max-height: 125px;
     }
-
-    .project:hover::after{
-        font-size: 20px;
-    }
 }
 
 @media (max-width: 768px){
@@ -155,40 +152,12 @@ img{
         max-width: 100px; /* Make images smaller on mobile */
         max-height: 100px;
     }
-
-    .project:nth-child(1) { top: 5%; left: 10%; }
-    .project:nth-child(2) { top: 30%; left: 55%; }
-    .project:nth-child(3) { top: 25%; left: 15%; }
-    .project:nth-child(4) { top: 45%; left: 50%; }
-    .project:nth-child(5) { top: 60%; left: 40%; }
-    .project:nth-child(6) { top: 75%; left: 25%; }
-    .project:nth-child(7) { top: 85%; left: 60%; }
-    .project:nth-child(8) { top: 15%; left: 50%; }
-    .project:nth-child(9) { top: 35%; left: 70%; }
-
-    .project:hover::after{
-        font-size: 16px;
-    }
 }
 
 @media (max-width: 480px){
     .project img{
         max-width: 75px; /* Even smaller on smaller screens */
         max-height: 75px;
-    }
-
-    .project:nth-child(1) { top: 5%; left: 5%; }
-    .project:nth-child(2) { top: 25%; left: 50%; }
-    .project:nth-child(3) { top: 40%; left: 10%; }
-    .project:nth-child(4) { top: 55%; left: 50%; }
-    .project:nth-child(5) { top: 70%; left: 30%; }
-    .project:nth-child(6) { top: 80%; left: 50%; }
-    .project:nth-child(7) { top: 90%; left: 10%; }
-    .project:nth-child(8) { top: 20%; left: 60%; }
-    .project:nth-child(9) { top: 50%; left: 80%; }
-
-    .project:hover::after{
-        font-size: 12px;
     }
 }
 
@@ -211,32 +180,6 @@ img{
         width: 75%;
     }
 }
-
-/* Captions (NOT IN USE)
-
-.project:hover::after{
-    content: attr(data-title);
-    position: absolute;
-    transform: translate(-50%, -50%);
-    color: black;
-    opacity: 0;
-    font-size: 24px;
-    font-family: Helvetica, Arial, sans-serif;
-    white-space: nowrap;
-    pointer-events: none;
-    z-index: 500;
-}
-
-.project:nth-child(1)::after { top: -10%; left: 50%; } /* counterpart */
-.project:nth-child(2)::after { top: 107%; left: 40%; } /* eurostile analysis */
-.project:nth-child(3)::after { top: 60%; left: -5%; } /* yayoi kusama */
-.project:nth-child(4)::after { top: -8%; left: 25%; } /* meltdown */
-.project:nth-child(5)::after { top: 110%; left: 80%; } /* waking moment */
-.project:nth-child(6)::after { top: 108%; left: -10%; } /* eurostile specimen */
-.project:nth-child(7)::after { top: 20%; left: -61%; } /* holv */
-.project:nth-child(8)::after { top: 11%; left: -17%; } /* caribbean blue */
-.project:nth-child(9)::after { top: 45%; left: 131%; } /* corporeal */
-.project:nth-child(10)::after { top: -13%; left: 45%; } /* a2 milk */
 
 /************************************* NAVBAR **************************************************************************************/
 
