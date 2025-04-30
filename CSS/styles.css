@@ -60,6 +60,24 @@ a:hover{
     .pages{
         margin-bottom: 150px;
     }
+
+    .pages h1{
+        font-size: 2em;
+        letter-spacing: -0.5px;
+    }
+}
+
+@media (max-width: 768px){
+    .pages h1{
+        font-size: 1.5em;
+        letter-spacing: -0.25px;
+    }
+}
+
+@media (max-width: 480px){
+    .pages h1{
+        font-size: 1.2em;
+    }
 }
 
 /************************************* HOME **************************************************************************************/
@@ -357,6 +375,12 @@ img{
     }
 }
 
+@media (max-width: 416px){
+    .page-title{
+        display: none;
+    }
+}
+
 @media (max-width: 768px){
     .hide-on-mobile {
         display: none !important;
@@ -447,6 +471,12 @@ img{
     background-color: transparent;
     padding: 5px;
     position: fixed;
+}
+
+@media (max-width:480px){
+    .playPauseBtn{
+        display: none;
+    }
 }
 
 /************************************* PROJECTS **************************************************************************************/
