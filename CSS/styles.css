@@ -177,6 +177,14 @@ img{
     white-space: nowrap;
 }
 
+.home-link img{
+    max-width: 150px;
+}
+
+.home-link img:hover{
+    animation: spin 1s linear infinite;
+}
+
 .home-link{
     left: 50px
 }
@@ -449,6 +457,10 @@ img{
     .image-section{
         width: 100%;
         padding-bottom: 0px;
+    }
+
+    .home-link img{
+        display: none;
     }
 }
 
