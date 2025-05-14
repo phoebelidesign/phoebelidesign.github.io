@@ -320,14 +320,14 @@ img{
     to { transform: rotate(360deg); }
 }
 
-.navbar-icon {
+.navbar-icon{
     width: 1em;
     height: 1em;
     object-fit: contain;
     vertical-align: middle;
 }
 
-.navbar-icon:hover {
+.navbar-icon:hover{
     animation: spin 1s linear infinite;
 }
 
@@ -385,6 +385,10 @@ img{
 
 @media (max-width:480px){
     .filter-btn{
+        display: none;
+    }
+
+    .playPauseBtn{
         display: none;
     }
 }
