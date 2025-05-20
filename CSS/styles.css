@@ -26,6 +26,10 @@ p{ /* about, contact. project descriptions */
     font-weight: lighter;
 }
 
+.italic{
+    font-style: italic;
+}
+
 #tooltip {
     font-size: 0.8em !important;
 }
