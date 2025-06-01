@@ -15,14 +15,14 @@ h1{ /* project heading */
 }
 
 h2{ /* project subheading */
-    font-size: 1.1em;
+    font-size: 1em;
     font-weight: lighter;
     font-style: italic;
     margin-top: 10px;
 }
 
 p{ /* about, project description */
-    font-size: 1.1em;
+    font-size: 1em;
     font-weight: lighter;
     margin-top: 0;
 }
@@ -430,7 +430,6 @@ img{
         position: static; /* Remove sticky so it scrolls normally */
         padding-top: 2%;
         padding-bottom: 5%;
-        text-align: center;
     }
 
     .image-section{
@@ -468,7 +467,7 @@ img{
         padding-right: 0;
     }
 
-    .image-section img{
+    .about-page .image-section img{
         display: none;
     }
 }
@@ -494,13 +493,13 @@ img{
 
 @media (max-width:768px){
     .responsive-img{
-        width: 60vw;
+        width: 50vw;
     }   
 }
 
 @media (max-width:480px){
     .responsive-img{
-        width: 80vw;
+        width: 75vw;
     }   
 }
 
