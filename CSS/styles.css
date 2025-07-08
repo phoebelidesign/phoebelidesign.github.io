@@ -10,8 +10,8 @@ h1{ /* project heading */
     font-weight: normal;
     letter-spacing: -1px;
     line-height: 1;
-    margin-bottom: 0;
     margin-top: 0;
+    margin-bottom: 0;
 }
 
 h2{ /* project subheading */
@@ -25,6 +25,7 @@ p{ /* about, project description */
     font-size: 1em;
     font-weight: lighter;
     margin-top: 0;
+    margin-bottom: 10px;
 }
 
 .italic{
@@ -252,12 +253,12 @@ img{
 
 @media (max-width: 638px){
     .home-link{
-        font-size: 3em;
-        letter-spacing: -2px;
+        font-size: 2.8em;
+        letter-spacing: -1.8px;
     }
     .page-title{
         font-size: 3em;
-        letter-spacing: -2px;
+        letter-spacing: -1.8px;
     }
 }
 
@@ -362,10 +363,6 @@ img{
     .filter-btn{
         display: none;
     }
-
-    .playPauseBtn{
-        display: none;
-    }
 }
 
 /************************************* PROJECTS **************************************************************************************/
@@ -430,6 +427,7 @@ img{
         position: static; /* Remove sticky so it scrolls normally */
         padding-top: 2%;
         padding-bottom: 5%;
+        text-align: center;
     }
 
     .image-section{
