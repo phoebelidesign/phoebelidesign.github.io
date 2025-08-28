@@ -1,14 +1,14 @@
 /************************************* TEXT **************************************************************************************/
-h1,h2,h3,h4,p{
-    font-family: Helvetica, Arial, sans-serif;
+h1,h2,h4,p{
+    font-family: psfournier-std, serif;
+    font-weight: 300;
+    font-style: normal;
     padding-left: 50px;
     padding-right: 50px;
 }
 
 h1{ /* project heading */
     font-size: 2.5em;
-    font-weight: normal;
-    letter-spacing: -1px;
     line-height: 1;
     margin-top: 0;
     margin-bottom: 0;
@@ -16,14 +16,12 @@ h1{ /* project heading */
 
 h2{ /* project subheading */
     font-size: 1em;
-    font-weight: lighter;
     font-style: italic;
     margin-top: 10px;
 }
 
 p{ /* about, project description */
     font-size: 1em;
-    font-weight: lighter;
     margin-top: 0;
     margin-bottom: 10px;
 }
@@ -147,8 +145,10 @@ img{
     font-size: 7em;
     font-weight: normal;
     color: black;
-    font-family: Helvetica, Arial, sans-serif;
-    letter-spacing: -5px;
+    font-family: psfournier-std, serif;
+    font-weight: 300;
+    font-style: normal;
+    letter-spacing: -2px;
     z-index: 9999;
     white-space: nowrap;
 }
@@ -314,8 +314,9 @@ img{
 .navbar li a{
     text-decoration: none;
     color: black;
-    font-family: Helvetica, Arial, sans-serif;
-    white-space: nowrap;
+    font-family: psfournier-std, serif;
+    font-weight: 400;
+    font-style: normal;    white-space: nowrap;
 }
   
 .navbar li a:hover{
@@ -335,7 +336,9 @@ img{
     margin: 0;
     font: inherit;
     color: black;
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: psfournier-std, serif;
+    font-weight: 400;
+    font-style: normal;
     text-decoration: none;
     cursor: pointer;
     white-space: nowrap;
@@ -511,7 +514,9 @@ img{
     position: absolute;
     color: black;
     padding: 5px;
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: psfournier-std, serif;
+    font-weight: 300;
+    font-style: normal;   
     font-size: 16px;
     border-radius: 0px;
     pointer-events: none;

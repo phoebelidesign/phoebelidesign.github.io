@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'Stempel Garamond LT Pro';
+    src: url('StempelGaramondLTPro-Italic.woff2') format('woff2'),
+        url('StempelGaramondLTPro-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Stempel Garamond LT Pro';
+    src: url('StempelGaramondLTPro-Roman.woff2') format('woff2'),
+        url('StempelGaramondLTPro-Roman.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
