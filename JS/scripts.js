@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
         projects.forEach(project => {
             project.addEventListener("mouseenter", function () {
                 let imgSrc = this.querySelector("img").src;
-                let bgImage = imgSrc.replace("_thumbnail", "_bg"); // Adjust naming if needed
+                let bgImage = imgSrc.replace("_thumb", "_bg"); // Adjust naming if needed
     
                 document.body.style.backgroundImage = `url(${bgImage})`;
     
