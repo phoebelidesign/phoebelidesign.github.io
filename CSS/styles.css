@@ -403,7 +403,7 @@ img{
 .image-section img{
     max-width: 100%;
     height: auto;
-    padding-bottom: 10px;
+    padding-bottom: 0px;
 }
 
 .image-section::-webkit-scrollbar{
