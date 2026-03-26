@@ -4,18 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Phoebe Li</title>
+    <script src="../scripts.js" delay></script>
     <link rel="stylesheet" href="../CSS/styles.css">
     <link rel="icon" type="image/png" href="../Assets/Images/favicon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://use.typekit.net/ton8ixe.css">
-    <!-- Preload -->
-    <link rel="preload" href="../Assets/Images/cpl-1.webp" as="image">
-    <link rel="preload" href="../Assets/Images/cpl-2.webp" as="image">
-    <link rel="preload" href="../Assets/Images/cpl-3.webp" as="image">
-    <link rel="preload" href="../Assets/Images/cpl-4.webp" as="image">
-    <link rel="preload" href="../Assets/Images/cpl-5.webp" as="image">
-    <link rel="preload" href="../Assets/Images/cpl-6.webp" as="image">
-    <link rel="preload" href="../Assets/Images/cpl-7.webp" as="image">
 </head>
 <body>
     <a href="../" class="home-link"><img src="../Assets/Images/favicon.png"></a>
@@ -34,18 +27,29 @@
             <div class="text-section">
                 <h1>Corporeal</h1>
                 <h2>Publication, Photography</h2>
-                <p>A photobook exploring demeanour and disposition through physical form, crafted with 90gsm vellum and ink.</p>
-                <p>Investigating ephemerality, moments of tenderness. What does gesture reveal in the absence of facial expression?</p>
-                <p>Transparency is leveraged to highlight how all captured moments together form a comprehensive study, parts of a bigger picture; multiple frames are visible simultaneously as all frames are interdependent.</p>
+                <p>A photobook exploring demeanour and disposition through physical form (and tenderness).</p>
+                <p>What does gesture reveal in the absence of facial expression? All captured moments form a comprehensive study. They are parts of a bigger picture; several frames are visible simultaneously as all frames are interdependent. Printed on 90gsm vellum.</p>
             </div>
             <div class="image-section">
-                <img src="../Assets/Images/cpl-1.webp">
-                <img src="../Assets/Images/cpl-2.webp">
-                <img src="../Assets/Images/cpl-3.webp">
-                <img src="../Assets/Images/cpl-4.webp">
-                <img src="../Assets/Images/cpl-5.webp">
-                <img src="../Assets/Images/cpl-6.webp">
-                <img src="../Assets/Images/cpl-7.webp">
+                <div class="slideContainer">
+                    <div class="slide"><img src="../Assets/Images/cpl-1.webp"></div>
+                    <div class="slide"><img src="../Assets/Images/cpl-2.webp"></div>
+                    <div class="slide"><img src="../Assets/Images/cpl-3.webp"></div>
+                    <div class="slide"><img src="../Assets/Images/cpl-4.webp"></div>
+                    <div class="slide"><img src="../Assets/Images/cpl-5.webp"></div>
+                    <div class="slide"><img src="../Assets/Images/cpl-6.webp"></div>
+                    <div class="slide"><img src="../Assets/Images/cpl-7.webp"></div>
+                    <div class="navOverlay" id="navOverlay"></div>
+                </div>
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                    <span class="dot" onclick="currentSlide(5)"></span>
+                    <span class="dot" onclick="currentSlide(6)"></span>
+                    <span class="dot" onclick="currentSlide(7)"></span>
+                </div>
         </div>
     </main>
     <script src="../JS/scripts.js" defer></script>
@@ -55,7 +59,7 @@
                 <source src="../Assets/Audio/the-field.mp3" type="audio/mp3">
             </audio>
         </div>
-        <h4>© Phoebe Li 2025</h4>
+        <h4>© Phoebe Li 2026</h4>
     </footer>
     <div id="tooltip">a tune while you look</div>
 </body>

@@ -4,15 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Phoebe Li</title>
+    <script src="../scripts.js" delay></script>
     <link rel="stylesheet" href="../CSS/styles.css">
     <link rel="icon" type="image/png" href="../Assets/Images/favicon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://use.typekit.net/ton8ixe.css">
-    <!-- Preload -->
-    <link rel="preload" href="../Assets/Images/es-1.webp" as="image">
-    <link rel="preload" href="../Assets/Images/es-2.webp" as="image">
-    <link rel="preload" href="../Assets/Images/es-3.webp" as="image">
-    <link rel="preload" href="../Assets/Images/es-4.webp" as="image">
 </head>
 <body>
     <a href="../" class="home-link"><img src="../Assets/Images/favicon.png"></a>
@@ -31,15 +27,24 @@
             <div class="text-section">
                 <h1>Eurostile Specimen</h1>
                 <h2>Typography</h2>
-                <p>Experimental type specimen for <em>Eurostile</em>, a 1962 typeface by Aldo Novarese.</p>
-                <p>Novarese described <em>Eurostile</em> as a 'synthetic expression of our times'. It was designed to be a symbol of its era's civilisation, capturing the zeitgeist of the 60s. Novarese drew inspiration for the typeface from the geometric forms of mid century architecture and design, such as the period's train windows and television frames.</p>
-                <p>To acknowledge the conceptual underpinning of the typeface, my type specimen is inspired by architectural blueprints and their traditional cyanotype process.</p>
+                <p>An experimental type specimen for <em>Eurostile</em>, a 1962 typeface by Aldo Novarese.</p>
+                <p>Novarese described <em>Eurostile</em> as a 'synthetic expression of our times', designing the typeface as a symbol of 60s civilisation. He drew inspiration from the geometric forms of mid century architecture and design, such as the period's train windows and television frames.</p>
+                <p>The specimen is therefore inspired by architectural blueprints and their traditional cyanotype process.</p>
             </div>
             <div class="image-section">
-                <img src="../Assets/Images/es-1.webp">
-                <img src="../Assets/Images/es-2.webp">
-                <img src="../Assets/Images/es-3.webp">
-                <img src="../Assets/Images/es-4.webp">
+                <div class="slideContainer">
+                    <div class="slide"><img src="../Assets/Images/es-1.webp"></div>
+                    <div class="slide"><img src="../Assets/Images/es-2.webp"></div>
+                    <div class="slide"><img src="../Assets/Images/es-3.webp"></div>
+                    <div class="slide"><img src="../Assets/Images/es-4.webp"></div>
+                    <div class="navOverlay" id="navOverlay"></div>
+                </div>
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                </div>
             </div>
         </div>
     </main>
@@ -50,7 +55,7 @@
                 <source src="../Assets/Audio/the-field.mp3" type="audio/mp3">
             </audio>
         </div>
-        <h4>© Phoebe Li 2025</h4>
+        <h4>© Phoebe Li 2026</h4>
     </footer>
     <div id="tooltip">a tune while you look</div>
 </body>

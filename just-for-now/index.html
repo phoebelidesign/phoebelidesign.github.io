@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Phoebe Li</title>
+    <script src="../scripts.js" defer></script>
     <link rel="stylesheet" href="../CSS/styles.css">
     <link rel="icon" type="image/png" href="../Assets/Images/favicon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -26,19 +27,35 @@
             <div class="text-section">
                 <h1>Just For Now</h1>
                 <h2>Publication, Photography</h2>
-                <p>A handbound photobook documenting observations of a brief odyssey. Shot on 35mm film and digital, printed on 170gsm silk-finish paper and bound with a white-thread kettle stitch. A collection of quiet moments and visual notes; these are messages meant for home.</p>
+                <p>A photobook documenting observations of a brief odyssey. Quiet moments and visual notes are collected as messages meant for home.</p>
+                <p>Shot on 35mm film and digital, handbound with a white-thread kettle stitch.</p>
             </div>
             <div class="image-section">
-                <img src="../Assets/Images/jfn-1.webp">
-                <img src="../Assets/Images/jfn-2.webp">
-                <img src="../Assets/Images/jfn-3.webp">
-                <img src="../Assets/Images/jfn-4.webp">
-                <img src="../Assets/Images/jfn-5.webp">
-                <img src="../Assets/Images/jfn-6.webp">
-                <img src="../Assets/Images/jfn-7.webp">
-                <img src="../Assets/Images/jfn-8.webp">
-                <img src="../Assets/Images/jfn-9.webp">
-                <img src="../Assets/Images/jfn-10.webp">
+                <div class="slideContainer">
+                    <div class="slide"><img src="../Assets/Images/jfn-1.webp"></div>
+                    <div class="slide"><img src="../Assets/Images/jfn-2.webp"></div>
+                    <div class="slide"><img src="../Assets/Images/jfn-3.webp"></div>
+                    <div class="slide"><img src="../Assets/Images/jfn-4.webp"></div>
+                    <div class="slide"><img src="../Assets/Images/jfn-5.webp"></div>
+                    <div class="slide"><img src="../Assets/Images/jfn-6.webp"></div>
+                    <div class="slide"><img src="../Assets/Images/jfn-7.webp"></div>
+                    <div class="slide"><img src="../Assets/Images/jfn-8.webp"></div>
+                    <div class="slide"><img src="../Assets/Images/jfn-9.webp"></div>
+                    <div class="slide"><img src="../Assets/Images/jfn-10.webp"></div>
+                    <div class="navOverlay" id="navOverlay"></div>
+                </div>
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                    <span class="dot" onclick="currentSlide(5)"></span>
+                    <span class="dot" onclick="currentSlide(6)"></span>
+                    <span class="dot" onclick="currentSlide(7)"></span>
+                    <span class="dot" onclick="currentSlide(8)"></span>
+                    <span class="dot" onclick="currentSlide(9)"></span>
+                    <span class="dot" onclick="currentSlide(10)"></span>
+                </div>
             </div>
         </div>
     </main>
@@ -49,7 +66,7 @@
                 <source src="../Assets/Audio/the-field.mp3" type="audio/mp3">
             </audio>
         </div>
-        <h4>© Phoebe Li 2025</h4>
+        <h4>© Phoebe Li 2026</h4>
     </footer>
     <div id="tooltip">a tune while you look</div>
 </body>
