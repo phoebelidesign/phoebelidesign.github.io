@@ -1,6 +1,11 @@
+@font-face {
+    font-family: 'Pantasia';
+    src: url('../Assets/Fonts/PantasiaUnlicencedTrial-Regular.ttf') format('truetype');
+}
+
 /************************************* TEXT **************************************************************************************/
-h1,h2,h4,p{
-    font-family: psfournier-std, serif;
+h1,h2,h3,h4,p{
+    font-family: 'psfournier-std', serif;
     font-weight: 300;
     font-style: normal;
     padding-left: 50px;
@@ -13,7 +18,7 @@ p + p {
 }
 
 h1{ /* project heading */
-    font-size: 2.5em;
+    font-size: 2em;
     line-height: 1;
     margin-top: 0;
     margin-bottom: 0;
@@ -21,7 +26,12 @@ h1{ /* project heading */
 
 h2{ /* project subheading */
     font-size: 1em;
-    font-style: italic;
+}
+
+h3{
+    font-size: 0.8em;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 p{ /* info, project desc */
@@ -39,7 +49,7 @@ p{ /* info, project desc */
     position: absolute;
     color: black;
     padding: 5px;
-    font-family: psfournier-std, serif;
+    font-family: 'pantasia', 'psfournier-std', serif;
     font-weight: 300;
     font-style: normal;
     border-radius: 0px;
@@ -50,6 +60,7 @@ p{ /* info, project desc */
 }
 
 h4{ /* copyright */
+    font-family: 'pantasia', 'psfournier-std', serif;
     text-align: center;
     font-size: 0.8em;
 }
@@ -147,13 +158,10 @@ img{
 
 /* home link */
 .home-link, .page-title{
-    font-family: psfournier-std, serif;
-    font-weight: 300;
-    font-style: normal;
+    font-family: 'pantasia', 'psfournier-std', serif;
     position: fixed;
-    bottom: 30px;
-    font-size: 7em;
-    letter-spacing: -1;
+    bottom: 20px;
+    font-size: 6em;
     z-index: 9999;
     white-space: nowrap;
 }
@@ -318,9 +326,8 @@ img{
 .navbar li a{
     text-decoration: none;
     color: black;
-    font-family: psfournier-std, serif;
-    font-weight: 400;
-    font-style: normal;    white-space: nowrap;
+    font-family: 'pantasia', 'psfournier-std', serif;   
+    white-space: nowrap;
 }
   
 .navbar li a:hover{
@@ -340,9 +347,7 @@ img{
     margin: 0;
     font: inherit;
     color: black;
-    font-family: psfournier-std, serif;
-    font-weight: 400;
-    font-style: normal;
+    font-family: 'pantasia', 'psfournier-std', serif;
     text-decoration: none;
     cursor: pointer;
     white-space: nowrap;
