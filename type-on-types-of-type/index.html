@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phoebe Li</title>
+    <script src="../scripts.js" delay></script>
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <link rel="icon" type="image/png" href="../Assets/Images/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">    
+    <link rel="stylesheet" href="https://use.typekit.net/ton8ixe.css">
+</head>
+<body>
+    <a href="../" class="home-link"><img src="../Assets/Images/favicon.png"></a>
+    <nav class="navbar" role="navigation" aria-label="Main Navigation">
+        <ul class="navbar-menu">
+            <li><a href="/">Phoebe Li</a></li>
+            <li><a href="../?category=Design" class="filter-btn">: Design</a></li>
+            <li><a href="../?category=Photo" class="filter-btn">: Photo</a></li>
+            <li><a href="../?category=Motion" class="filter-btn">: Motion</a></li>
+            <li><a href="../info">Info</a></li>
+            <li><button id="playPauseBtn" class="playPauseBtn" aria-label="Play/Pause audio"><i class="fas fa-play"></i></button></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="project-page">
+            <div class="text-section">
+                <h1>Type on types of type</h1>
+                <h2>Publication</h2>
+                <p>An anthology of essays on different approaches to typography within publication design.</p>
+                <p>Includes texts from ..</p>
+            </div>
+            <div class="image-section">
+                <div class="slideContainer">
+                    <div class="slide"><img src="../Assets/Images/totot-1.webp"></div>
+                    <div class="slide"><img src="../Assets/Images/totot-2.webp"></div>
+                    <div class="slide"><img src="../Assets/Images/totot-3.webp"></div>
+                    <div class="slide"><img src="../Assets/Images/totot-4.webp"></div>
+                    <div class="slide"><img src="../Assets/Images/totot-5.webp"></div>
+                    <div class="slide"><img src="../Assets/Images/totot-6.webp"></div>
+                    <div class="slide"><img src="../Assets/Images/totot-7.webp"></div>
+                    <div class="slide"><img src="../Assets/Images/totot-8.webp"></div>
+                    <div class="slide"><img src="../Assets/Images/totot-9.webp"></div>
+                    <div class="slide"><img src="../Assets/Images/totot-10.webp"></div>
+                    <div class="slide"><img src="../Assets/Images/totot-11.webp"></div>
+                    <div class="slide"><img src="../Assets/Images/totot-12.webp"></div>
+                    <div class="slide"><img src="../Assets/Images/totot-13.webp"></div>
+                    <div class="slide"><img src="../Assets/Images/totot-14.webp"></div>
+                    <div class="slide"><img src="../Assets/Images/totot-15.webp"></div>
+                    <div class="slide"><img src="../Assets/Images/totot-16.webp"></div>
+                    <div class="slide"><img src="../Assets/Images/totot-17.webp"></div>
+                    <div class="slide"><img src="../Assets/Images/totot-18.webp"></div>
+                    <div class="slide"><img src="../Assets/Images/totot-19.webp"></div>
+                    <div class="slide"><img src="../Assets/Images/totot-20.webp"></div>
+                    <div class="slide"><img src="../Assets/Images/totot-21.webp"></div>
+                    <div class="slide"><img src="../Assets/Images/totot-22.webp"></div>
+                    <div class="slide"><img src="../Assets/Images/totot-23.webp"></div>
+                    <div class="slide"><img src="../Assets/Images/totot-24.webp"></div>
+                    <div class="slide"><img src="../Assets/Images/totot-25.webp"></div>
+                    <div class="slide"><img src="../Assets/Images/totot-26.webp"></div>
+                    <div class="navOverlay" id="navOverlay"></div>
+                </div>
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                    <span class="dot" onclick="currentSlide(5)"></span>
+                    <span class="dot" onclick="currentSlide(6)"></span>
+                    <span class="dot" onclick="currentSlide(7)"></span>
+                    <span class="dot" onclick="currentSlide(8)"></span>
+                    <span class="dot" onclick="currentSlide(9)"></span>
+                    <span class="dot" onclick="currentSlide(10)"></span>
+                    <span class="dot" onclick="currentSlide(11)"></span>
+                    <span class="dot" onclick="currentSlide(12)"></span>
+                    <span class="dot" onclick="currentSlide(13)"></span>
+                    <span class="dot" onclick="currentSlide(14)"></span>
+                    <span class="dot" onclick="currentSlide(15)"></span>
+                    <span class="dot" onclick="currentSlide(16)"></span>
+                    <span class="dot" onclick="currentSlide(17)"></span>
+                    <span class="dot" onclick="currentSlide(18)"></span>
+                    <span class="dot" onclick="currentSlide(19)"></span>
+                    <span class="dot" onclick="currentSlide(20)"></span>
+                    <span class="dot" onclick="currentSlide(21)"></span>
+                    <span class="dot" onclick="currentSlide(22)"></span>
+                    <span class="dot" onclick="currentSlide(23)"></span>
+                    <span class="dot" onclick="currentSlide(24)"></span>
+                    <span class="dot" onclick="currentSlide(25)"></span>
+                    <span class="dot" onclick="currentSlide(26)"></span>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="../JS/scripts.js" defer></script>
+    <footer>
+        <div class="audio-container">
+            <audio id="audio" loop>
+                <source src="../Assets/Audio/the-field.mp3" type="audio/mp3">
+            </audio>
+        </div>
+        <h4>© Phoebe Li 2025</h4>
+    </footer>
+    <div id="tooltip">a tune while you look</div>
+</body>
+</html>
