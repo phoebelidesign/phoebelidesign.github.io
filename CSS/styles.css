@@ -119,8 +119,8 @@ img{
 }
 
 .project img{
-    max-width: 150px;
-    max-height: 150px;
+    max-width: 10vw;
+    max-height: 10vw;
     width: auto;
     height: auto;
     object-fit: contain;
@@ -132,28 +132,6 @@ img{
     opacity: 1;
 }
 
-/* project thumbnails */
-@media (max-width: 992px){
-    .project img{
-        max-width: 125px;
-        max-height: 125px;
-    }
-}
-
-@media (max-width: 768px){
-    .project img{
-        max-width: 100px;
-        max-height: 100px;
-    }
-}
-
-@media (max-width: 480px){
-    .project img{
-        max-width: 75px;
-        max-height: 75px;
-    }
-}
-
 /************************************* NAVBAR **************************************************************************************/
 
 /* home link */
@@ -161,17 +139,9 @@ img{
     font-family: 'pantasia', 'psfournier-std', serif;
     position: fixed;
     bottom: 20px;
-    font-size: 6em;
+    font-size: 6vw;
     z-index: 9999;
     white-space: nowrap;
-}
-
-.home-link img{
-    max-width: 100px;
-}
-
-.home-link img:hover{
-    animation: spin 1s linear infinite;
 }
 
 .home-link{
@@ -188,96 +158,6 @@ img{
 
 .home-link.inactive, .page-title.inactive{
     pointer-events: none;
-}
-
-@media (max-width: 1156px){
-    .home-link{
-        font-size: 6.5em;
-        letter-spacing: -4.5px;
-    }
-    .page-title{
-        font-size: 6.5em;
-        letter-spacing: -4.5px;
-    }
-}
-
-@media (max-width: 1085px){
-    .home-link{
-        font-size: 6em;
-        letter-spacing: -4px;
-    }
-    .page-title{
-        font-size: 6em;
-        letter-spacing: -4px;
-    }
-}
-
-@media (max-width: 1012px){
-    .home-link{
-        font-size: 5.5em;
-    }
-    .page-title{
-        font-size: 5.5em;
-    }
-}
-
-@media (max-width: 932px){
-    .home-link{
-        font-size: 5em;
-        letter-spacing: -3.5px;
-    }
-    .page-title{
-        font-size: 5em;
-        letter-spacing: -3.5px;
-    }
-}
-
-@media (max-width: 860px){
-    .home-link{
-        font-size: 4.5em;
-        letter-spacing: -3px;
-    }
-    .page-title{
-        font-size: 4.5em;
-        letter-spacing: -3px;
-    }
-}
-
-@media (max-width: 788px){
-    .home-link{
-        font-size: 4em;
-        letter-spacing: -2.5px;
-    }
-    .page-title{
-        font-size: 4em;
-        letter-spacing: -2.5px;
-    }
-}
-
-@media (max-width: 718px){
-    .home-link{
-        font-size: 3.5em;
-    }
-    .page-title{
-        font-size: 3.5em;
-    }
-}
-
-@media (max-width: 638px){
-    .home-link{
-        font-size: 2.8em;
-        letter-spacing: -1.8px;
-    }
-    .page-title{
-        font-size: 3em;
-        letter-spacing: -1.8px;
-    }
-}
-
-@media (max-width: 562px){
-    .page-title{
-        display: none;
-    }
 }
 
 @media (max-width: 768px){
