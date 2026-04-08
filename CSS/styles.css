@@ -13,12 +13,13 @@ h1,h2,h3,h4,p{
 }
 
 p + p {
-  text-indent: 2em;
-  margin-top: 0;
+    text-indent: 2em;
+    margin-top: 0;
 }
 
 h1{ /* project heading */
-    font-size: 2em;
+    font-family: 'pantasia';
+    font-size: 1.5em;
     line-height: 1;
     margin-top: 0;
     margin-bottom: 0;
