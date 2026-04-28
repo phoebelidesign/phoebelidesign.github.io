@@ -1,25 +1,25 @@
 // Select elements
-const audio = document.querySelector("#audio");
+const Audio = document.querySelector("#Audio");
 const playPauseBtn = document.querySelector("#playPauseBtn");
 const icon = playPauseBtn.querySelector("i");
 
 // Use BroadcastChannel for cross-page communication
-const audioChannel = new BroadcastChannel("audio_sync");
+const AudioChannel = new BroadcastChannel("Audio_sync");
 
 // Load saved state when page loads
 window.addEventListener("DOMContentLoaded", () => {
-    const isPlaying = localStorage.getItem("audioPlaying") === "true";
-    const savedTime = parseFloat(localStorage.getItem("audioTime")) || 0;
+    const isPlaying = localStorage.getItem("AudioPlaying") === "true";
+    const savedTime = parseFloat(localStorage.getItem("AudioTime")) || 0;
 
-    audio.currentTime = savedTime; // Restore saved time
+    Audio.currentTime = savedTime; // Restore saved time
 
     if (isPlaying) {
-        audio.play();
+        Audio.play();
         icon.classList.replace("fa-play", "fa-pause");
     }
 
     // Broadcast current state to other tabs to keep them in sync
-    audioChannel.postMessage({
+    AudioChannel.postMessage({
         action: isPlaying ? "play" : "pause",
         time: savedTime
     });
@@ -27,36 +27,36 @@ window.addEventListener("DOMContentLoaded", () => {
 
 // Toggle play/pause functionality
 playPauseBtn.addEventListener("click", () => {
-    if (audio.paused) {
-        audio.play();
-        localStorage.setItem("audioPlaying", "true");
+    if (Audio.paused) {
+        Audio.play();
+        localStorage.setItem("AudioPlaying", "true");
         icon.classList.replace("fa-play", "fa-pause");
     } else {
-        audio.pause();
-        localStorage.setItem("audioPlaying", "false");
+        Audio.pause();
+        localStorage.setItem("AudioPlaying", "false");
         icon.classList.replace("fa-pause", "fa-play");
     }
 });
 
 // Listen for changes from other pages
-audioChannel.addEventListener("message", (event) => {
+AudioChannel.addEventListener("message", (event) => {
     if (event.data.action === "play") {
         setTimeout(() => {
-            audio.currentTime = event.data.time;
-            audio.play();
+            Audio.currentTime = event.data.time;
+            Audio.play();
         }, 100); // Small delay to prevent conflicts
         icon.classList.replace("fa-play", "fa-pause");
-        localStorage.setItem("audioPlaying", "true");
+        localStorage.setItem("AudioPlaying", "true");
     } else if (event.data.action === "pause") {
-        audio.pause();
+        Audio.pause();
         icon.classList.replace("fa-pause", "fa-play");
-        localStorage.setItem("audioPlaying", "false");
+        localStorage.setItem("AudioPlaying", "false");
     }
 });
 
 // Save current time before navigating away
 window.addEventListener("beforeunload", () => {
-    localStorage.setItem("audioTime", audio.currentTime);
+    localStorage.setItem("AudioTime", Audio.currentTime);
 });
 
 // BACKGROUND IMAGE ON HOVER
