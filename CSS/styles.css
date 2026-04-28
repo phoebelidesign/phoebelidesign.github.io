@@ -8,8 +8,6 @@ h1,h2,h3,h4,p{
     font-family: 'psfournier-std', serif;
     font-weight: 300;
     font-style: normal;
-    padding-left: 50px;
-    padding-right: 50px;
 }
 
 p + p {
@@ -29,7 +27,7 @@ h2{ /* project subheading */
     font-size: 1em;
 }
 
-h3{
+h3{ /* acknowledgement */
     font-size: 0.8em;
     margin-top: 0;
     margin-bottom: 0;
@@ -98,6 +96,7 @@ ul{
 
 main{
     height: auto;
+    padding: 25px 50px;
 }
 
 img{
@@ -268,22 +267,22 @@ img{
 
 .project-page{
     display: flex;
-    align-items: flex-start;
     position: relative;
-    padding-left: 0px;
-    padding-right: 50px;
+    padding-top: 100px;
+}
+
+#type-on-types-of-type{
+    padding-top: 0;
 }
 
 .text-section{
-    width: 35%;
-    position: sticky;
-    top: 80px;
+    width: 30%;
+    padding-right: 50px;
 }
 
 .image-section{
-    width: 65%;
+    width: 70%;
     overflow-y: visible;
-    padding-bottom: 0px;
 }
 
 .image-section img{
@@ -317,15 +316,14 @@ img{
 @media (max-width: 992px){
     .project-page{
         flex-direction: column;
-        padding-left: 0;
-        padding-right: 0;
+        padding: 0px 0px 50px;
     }
 
     .text-section{
         width: 100%;
+        padding-right: 0px;
         position: static; /* remove sticky so it scrolls normally */
-        padding-top: 2%;
-        padding-bottom: 5%;
+        padding-bottom: 25px;
         text-align: center;
     }
 
@@ -386,18 +384,12 @@ img{
     cursor: url('data:image/svg+xml;utf8,<svg fill="grey" height="50" viewBox="0 0 24 24" width="50" xmlns="http://www.w3.org/2000/svg"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg>') 35 35, auto;
 }
 
-/************************************* ABOUT **************************************************************************************/
+/************************************* INFO **************************************************************************************/
 
 .info-page{
     display: flex;
     position: relative;
     justify-content: space-between;
-    padding-left: 0px;
-    padding-right: 50px;
-}
-
-.info-page .text-section{
-    top: 0px;
 }
 
 .info-page .image-section{
@@ -407,12 +399,12 @@ img{
 @media (max-width: 992px){
     .info-page{
         flex-direction: column;
-        padding-left: 0;
-        padding-right: 0;
+        align-items: center;
     }
 
-    .info-page .image-section img{
-        display: none;
+    .info-page .image-section{
+        padding-top: 50px;
+        width: 50%;
     }
 }
 
