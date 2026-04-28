@@ -3,7 +3,7 @@
     src: url('../assets/fonts/PantasiaUnlicencedTrial-Regular.ttf') format('truetype');
 }
 
-/************************************* TEXT **************************************************************************************/
+/*************************************************************************************************************************** TEXT */
 h1,h2,h3,h4,p{
     font-family: 'psfournier-std', serif;
     font-weight: 300;
@@ -73,66 +73,7 @@ a:hover{
     opacity: 0.5;
 }
 
-/************************************* HOME **************************************************************************************/
-
-/* basic html and body setup */
-body{
-    scroll-behavior: smooth;
-    overscroll-behavior: none;
-    background: none no-repeat center center fixed;
-    background-size: cover;
-}
-
-body,ul{
-    overflow-x: hidden;
-    margin: 0;
-    padding: 0;
-    height: 100%;
-}
-
-ul{
-    list-style: none;
-}
-
-main{
-    height: auto;
-    padding: 25px 50px;
-}
-
-img{
-    width: 100%;
-}
-
-.portfolio-container{
-    position: relative;
-    width: 100%;
-    min-height: 85vh;
-    overflow: hidden;
-}
-
-.project{
-    position: absolute;
-    transform: translate(-50%, -50%);
-    opacity: 1;
-    cursor: pointer;
-    transition: transform 0.2s ease-in-out;
-}
-
-.project img{
-    max-width: 10vw;
-    max-height: 10vw;
-    width: auto;
-    height: auto;
-    object-fit: contain;
-    transition: transform 0.2s ease-in-out;
-}
-
-.project:hover{
-    transform: scale(0.95) translate(-52%, -52%);
-    opacity: 1;
-}
-
-/************************************* NAVBAR **************************************************************************************/
+/*************************************************************************************************************************** NAVBAR */
 
 /* home link */
 .home-link, .page-title{
@@ -182,7 +123,8 @@ img{
     margin: 0;
     width: 100%;
 }
-  
+
+/*
 @keyframes spin {
     from { transform: rotate(0deg); }
     to { transform: rotate(360deg); }
@@ -198,6 +140,7 @@ img{
 .navbar-icon:hover{
     animation: spin 1s linear infinite;
 }
+*/
 
 .navbar ul{
     display: flex;
@@ -263,7 +206,65 @@ img{
     }
 }
 
-/************************************* PROJECTS **************************************************************************************/
+/*************************************************************************************************************************** HOME */
+
+/* basic html and body setup */
+body{
+    scroll-behavior: smooth;
+    overscroll-behavior: none;
+    background: none no-repeat center center fixed;
+    background-size: cover;
+}
+
+body,ul{
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+ul{
+    list-style: none;
+}
+
+main{
+    padding: 25px 50px;
+}
+
+img{
+    width: 100%;
+}
+
+.portfolio-container{
+    position: relative;
+    width: 100%;
+    min-height: 80vh;
+    overflow: hidden;
+}
+
+.project{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.project img{
+    max-width: 10vw;
+    max-height: 10vw;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.2s ease-in-out;
+}
+
+.project:hover{
+    transform: scale(0.95) translate(-52%, -52%);
+    opacity: 1;
+}
+
+/*************************************************************************************************************************** WORK */
 
 .project-page{
     display: flex;
@@ -384,7 +385,7 @@ img{
     cursor: url('data:image/svg+xml;utf8,<svg fill="grey" height="50" viewBox="0 0 24 24" width="50" xmlns="http://www.w3.org/2000/svg"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg>') 35 35, auto;
 }
 
-/************************************* INFO **************************************************************************************/
+/*************************************************************************************************************************** INFO */
 
 .info-page{
     display: flex;
@@ -408,38 +409,7 @@ img{
     }
 }
 
-/************************************* CONTACT *************************************************************************************/
-
-.responsive-img{
-    display: block;
-    width: 30vw;
-    max-width: 350px;
-    height: auto;
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-@media (max-width:992px){
-    .responsive-img{
-        width: 40vw;
-    }   
-}
-
-@media (max-width:768px){
-    .responsive-img{
-        width: 50vw;
-    }   
-}
-
-@media (max-width:480px){
-    .responsive-img{
-        width: 75vw;
-    }   
-}
-
-/************************************* FOOTER **************************************************************************************/
+/*************************************************************************************************************************** FOOTER */
 
 footer {
     position: fixed;
