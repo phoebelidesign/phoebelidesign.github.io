@@ -230,6 +230,9 @@ ul{
 
 main{
     padding: 25px 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
 }
 
 img{
@@ -269,8 +272,8 @@ img{
 
 .project-page{
     display: flex;
+    gap: 50px;
     position: relative;
-    padding-top: 100px;
 }
 
 #type-on-types-of-type{
@@ -279,7 +282,6 @@ img{
 
 .text-section{
     width: 30%;
-    padding-right: 50px;
 }
 
 .image-section{
