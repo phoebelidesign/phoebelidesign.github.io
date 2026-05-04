@@ -274,6 +274,7 @@ img{
     display: flex;
     gap: 50px;
     position: relative;
+    scroll-margin-top: 100px;
 }
 
 #type-on-types-of-type{
