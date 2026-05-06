@@ -1,43 +1,51 @@
 @font-face {
     font-family: 'pantasia';
-    src: url('Assets/Fonts/PantasiaUnlicencedTrial-Regular.ttf') format('truetype');
+    src: url('Assets/Fonts/Pantasia-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'arketa';
+    src: url('Assets/Fonts/OOArketa-Light.otf') format('truetype');
 }
 
 /*************************************************************************************************************************** TEXT */
 h1,h2,h3,h4,p{
-    font-family: 'psfournier-std', serif;
-    font-weight: 300;
+    font-family: 'arketa', serif;
+    font-weight: normal;
     font-style: normal;
-}
-
-p + p {
-    text-indent: 2em;
-    margin-top: 0;
 }
 
 h1{ /* project heading */
     font-family: 'pantasia';
     font-size: 1.5em;
-    line-height: 1;
     margin-top: 0;
     margin-bottom: 0;
 }
 
 h2{ /* project subheading */
-    font-family: 'pantasia';
-    font-size: 1em;
+    font-size: 0.8em;
+    text-transform: uppercase;
 }
 
-h3{ /* acknowledgement */
+p{ /* project desc, info */
     font-size: 0.8em;
     margin-top: 0;
     margin-bottom: 0;
 }
 
-p{ /* info, project desc */
-    font-size: 1em;
+p + p {
+    text-indent: 2em;
+}
+
+h3{ /* acknowledgement */
+    font-size: 0.6em;
     margin-top: 0;
     margin-bottom: 0;
+}
+
+h4{ /* copyright */
+    text-align: center;
+    font-size: 0.8em;
 }
 
 .italic{
@@ -49,7 +57,7 @@ p{ /* info, project desc */
     position: absolute;
     color: black;
     padding: 5px;
-    font-family: 'pantasia', 'psfournier-std', serif;
+    font-family: 'pantasia', 'arketa', serif;
     font-weight: 300;
     font-style: normal;
     border-radius: 0px;
@@ -57,12 +65,6 @@ p{ /* info, project desc */
     opacity: 0;
     transition: opacity 0.2s ease-in-out;
     white-space: nowrap;
-}
-
-h4{ /* copyright */
-    font-family: 'pantasia', 'psfournier-std', serif;
-    text-align: center;
-    font-size: 0.8em;
 }
 
 a{ /* links */
@@ -78,7 +80,7 @@ a:hover{
 
 /* home link */
 .home-link, .page-title{
-    font-family: 'pantasia', 'psfournier-std', serif;
+    font-family: 'pantasia', 'arketa', serif;
     position: fixed;
     bottom: 20px;
     font-size: 6vw;
@@ -92,10 +94,6 @@ a:hover{
 
 .page-title{
     right: 50px
-}
-
-.home-link:hover{
-    opacity: 0.5;
 }
 
 .home-link.inactive, .page-title.inactive{
@@ -125,24 +123,6 @@ a:hover{
     width: 100%;
 }
 
-/*
-@keyframes spin {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-}
-
-.navbar-icon{
-    width: 1em;
-    height: 1em;
-    object-fit: contain;
-    vertical-align: middle;
-}
-
-.navbar-icon:hover{
-    animation: spin 1s linear infinite;
-}
-*/
-
 .navbar ul{
     display: flex;
 }
@@ -150,11 +130,11 @@ a:hover{
 .navbar li a{
     text-decoration: none;
     color: black;
-    font-family: 'pantasia', 'psfournier-std', serif;   
+    font-family: 'pantasia', 'arketa', serif;   
     white-space: nowrap;
 }
   
-.navbar li a:hover{
+.navbar li a:hover, .navbar li button.filter-btn:hover{
     text-decoration: underline;
     opacity: 1;
 }
@@ -171,15 +151,10 @@ a:hover{
     margin: 0;
     font: inherit;
     color: black;
-    font-family: 'pantasia', 'psfournier-std', serif;
+    font-family: 'pantasia', 'arketa', serif;
     text-decoration: none;
     cursor: pointer;
     white-space: nowrap;
-}
-
-.navbar li button.filter-btn:hover{
-    text-decoration: underline;
-    opacity: 1;
 }
 
 .navbar li button.filter-btn.active{
@@ -209,7 +184,6 @@ a:hover{
 
 /*************************************************************************************************************************** HOME */
 
-/* basic html and body setup */
 body{
     scroll-behavior: smooth;
     overscroll-behavior: none;
@@ -354,10 +328,10 @@ img{
 
 .dot{
     cursor: pointer;
-    height: 7px;
-    width: 7px;
+    height: 6px;
+    width: 6px;
     background-color: #bbb;
-    margin: 0 1px 0;
+    margin: 0 2px 0;
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.5s ease;
