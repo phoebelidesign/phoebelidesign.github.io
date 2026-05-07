@@ -61,7 +61,7 @@ window.addEventListener("beforeunload", () => {
 
 // BACKGROUND IMAGE ON HOVER
 document.addEventListener("DOMContentLoaded", function () {
-    const projects = document.querySelectorAll(".project");
+    const projects = document.querySelectorAll(".link");
 
     // Detect if device is touch/mobile
     const isMobile = window.innerWidth <= 768;
@@ -146,7 +146,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 //filter
 document.addEventListener("DOMContentLoaded", function () {
-    const projects = document.querySelectorAll(".project");
+    const projects = document.querySelectorAll(".link");
     const filterButtons = document.querySelectorAll(".filter-btn");
     const pageTitle = document.getElementById("page-title");
 
@@ -175,7 +175,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 //Filter buttons to act like normal navigation links, but also filter
 document.addEventListener("DOMContentLoaded", function () {
-    const projects = document.querySelectorAll(".project");
+    const projects = document.querySelectorAll(".link");
     const pageTitle = document.getElementById("page-title");
     const urlParams = new URLSearchParams(window.location.search);
     const selectedCategory = urlParams.get("category");
