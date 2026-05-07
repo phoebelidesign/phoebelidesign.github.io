@@ -46,6 +46,7 @@ h3{ /* acknowledgement */
 h4{ /* copyright */
     text-align: center;
     font-size: 0.8em;
+    text-transform: uppercase;
 }
 
 .italic{
