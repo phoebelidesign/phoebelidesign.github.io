@@ -1,3 +1,42 @@
+// LISTEN TO A TUNE
+document.addEventListener("DOMContentLoaded", function () {
+    const tooltip = document.getElementById("tooltip");
+    const playPauseBtn = document.getElementById("playPauseBtn");
+
+    playPauseBtn.addEventListener("mouseenter", function () {
+        tooltip.style.opacity = "1"; // Show tooltip
+    });
+
+    playPauseBtn.addEventListener("mouseleave", function () {
+        tooltip.style.opacity = "0"; // Hide tooltip
+    });
+
+    playPauseBtn.addEventListener("mousemove", function (event) {
+        let tooltipWidth = tooltip.offsetWidth;
+        let tooltipHeight = tooltip.offsetHeight;
+        let pageWidth = window.innerWidth;
+        let pageHeight = window.innerHeight;
+        let offsetX = -45; // Space between mouse and tooltip
+        let offsetY = 10;
+
+        let posX = event.pageX + offsetX;
+        let posY = event.pageY + offsetY;
+
+        // Prevent tooltip from going off-screen (right)
+        if (posX + tooltipWidth > pageWidth) {
+            posX = event.pageX - tooltipWidth - offsetX;
+        }
+
+        // Prevent tooltip from going off-screen (bottom)
+        if (posY + tooltipHeight > pageHeight) {
+            posY = event.pageY - tooltipHeight - offsetY;
+        }
+
+        tooltip.style.left = `${posX}px`;
+        tooltip.style.top = `${posY}px`;
+    });
+});
+
 // Select elements
 const Audio = document.querySelector("#Audio");
 const playPauseBtn = document.querySelector("#playPauseBtn");
@@ -59,7 +98,7 @@ window.addEventListener("beforeunload", () => {
     localStorage.setItem("AudioTime", Audio.currentTime);
 });
 
-// BACKGROUND IMAGE ON HOVER
+// THUMBNAIL IMAGE ON HOVER
 document.addEventListener("DOMContentLoaded", function () {
     const projects = document.querySelectorAll(".link");
 
@@ -77,7 +116,7 @@ document.addEventListener("DOMContentLoaded", function () {
     
                 projects.forEach(p => {
                     if (p !== this) {
-                        p.style.opacity = "0"; // Fade out other thumbnails
+                        p.style.opacity = "1"; // Fade out other thumbnails
                         p.style.pointerEvents = "none"; // Disable interaction
                     }
                 });
@@ -95,45 +134,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-// LISTEN TO A TUNE
-document.addEventListener("DOMContentLoaded", function () {
-    const tooltip = document.getElementById("tooltip");
-    const playPauseBtn = document.getElementById("playPauseBtn");
-
-    playPauseBtn.addEventListener("mouseenter", function () {
-        tooltip.style.opacity = "1"; // Show tooltip
-    });
-
-    playPauseBtn.addEventListener("mouseleave", function () {
-        tooltip.style.opacity = "0"; // Hide tooltip
-    });
-
-    playPauseBtn.addEventListener("mousemove", function (event) {
-        let tooltipWidth = tooltip.offsetWidth;
-        let tooltipHeight = tooltip.offsetHeight;
-        let pageWidth = window.innerWidth;
-        let pageHeight = window.innerHeight;
-        let offsetX = -45; // Space between mouse and tooltip
-        let offsetY = 10;
-
-        let posX = event.pageX + offsetX;
-        let posY = event.pageY + offsetY;
-
-        // Prevent tooltip from going off-screen (right)
-        if (posX + tooltipWidth > pageWidth) {
-            posX = event.pageX - tooltipWidth - offsetX;
-        }
-
-        // Prevent tooltip from going off-screen (bottom)
-        if (posY + tooltipHeight > pageHeight) {
-            posY = event.pageY - tooltipHeight - offsetY;
-        }
-
-        tooltip.style.left = `${posX}px`;
-        tooltip.style.top = `${posY}px`;
-    });
-});
-
 //DETECT PROJECT PAGES TO HIDE HOMELINK
 document.addEventListener("DOMContentLoaded", function () {
     const homeLink = document.querySelector(".home-link");
@@ -144,7 +144,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-//filter
+//FILTER
 document.addEventListener("DOMContentLoaded", function () {
     const projects = document.querySelectorAll(".link");
     const filterButtons = document.querySelectorAll(".filter-btn");
