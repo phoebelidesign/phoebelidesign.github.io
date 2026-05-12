@@ -312,7 +312,7 @@ img{
 }
 
 /* mobile - stack sections vertically */
-@media (max-width: 992px){
+@media (max-width: 960px){
     .project-page{
         flex-direction: column;
         padding: 0px 0px 50px;
@@ -395,7 +395,7 @@ img{
     width: 25%;
 }
 
-@media (max-width: 992px){
+@media (max-width: 960px){
     .info-page{
         flex-direction: column;
         align-items: center;
