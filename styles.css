@@ -10,8 +10,8 @@
 
 /*************************************************************************************************************************** TEXT */
 h1,h2,h3,h4,p{
-    font-family: 'arketa', serif;
-    font-weight: normal;
+    font-family: 'ibm-plex-mono', serif;
+    font-weight: 300;
     font-style: normal;
     margin-top: 0;
     margin-bottom: 0;
@@ -52,7 +52,7 @@ h4{ /* copyright */
     position: absolute;
     color: black;
     padding: 5px;
-    font-family: 'pantasia', 'arketa', serif;
+    font-family: 'pantasia', 'ibm-plex-mono', serif;
     font-weight: 300;
     font-style: normal;
     border-radius: 0px;
@@ -75,7 +75,7 @@ a:hover{
 
 /* home link */
 .home-link, .page-title{
-    font-family: 'pantasia', 'arketa', serif;
+    font-family: 'pantasia', 'ibm-plex-mono', serif;
     position: fixed;
     bottom: 20px;
     font-size: 6vw;
@@ -125,7 +125,7 @@ a:hover{
 .navbar li a{
     text-decoration: none;
     color: black;
-    font-family: 'pantasia', 'arketa', serif;   
+    font-family: 'pantasia', 'ibm-plex-mono', serif;   
     white-space: nowrap;
 }
   
@@ -146,7 +146,7 @@ a:hover{
     margin: 0;
     font: inherit;
     color: black;
-    font-family: 'pantasia', 'arketa', serif;
+    font-family: 'pantasia', 'ibm-plex-mono', serif;
     text-decoration: none;
     cursor: pointer;
     white-space: nowrap;
@@ -239,7 +239,7 @@ img{
 }
 
 .link{
-    font-family: 'arketa', serif;
+    font-family: 'ibm-plex-mono', serif;
     font-size: 0.8em;
     text-transform: uppercase;
 }
@@ -377,10 +377,10 @@ img{
     z-index: 10;
 }
 .navOverlay.left-hover{
-    cursor: url('data:image/svg+xml;utf8,<svg fill="grey" height="50" viewBox="0 0 24 24" width="50" xmlns="http://www.w3.org/2000/svg"><path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6z"/></svg>') 35 35, auto;
+    cursor: url('data:image/svg+xml;utf8,<svg fill="silver" height="50" viewBox="0 0 24 24" width="50" xmlns="http://www.w3.org/2000/svg"><path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6z"/></svg>') 35 35, auto;
 }
 .navOverlay.right-hover{
-    cursor: url('data:image/svg+xml;utf8,<svg fill="grey" height="50" viewBox="0 0 24 24" width="50" xmlns="http://www.w3.org/2000/svg"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg>') 35 35, auto;
+    cursor: url('data:image/svg+xml;utf8,<svg fill="silver" height="50" viewBox="0 0 24 24" width="50" xmlns="http://www.w3.org/2000/svg"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg>') 35 35, auto;
 }
 
 /*************************************************************************************************************************** INFO */
