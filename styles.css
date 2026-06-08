@@ -10,15 +10,23 @@
 
 /****************************************************************** TEXT */
 
-p,a{
+p,a,h4{
     font-family: 'adobe-garamond-pro', 'times new roman', serif;
     font-weight: normal;
     font-style: normal;
-    font-size: 0.9em;
     margin-top: 0;
     margin-bottom: 0;
     font-variant-numeric: oldstyle-nums;
 }
+
+p{
+    font-size: 0.9em;
+}
+
+h4{
+    font-size: 0.7em;
+}
+
 
 p+p{
     text-indent: 2em;
@@ -436,10 +444,18 @@ img{
     opacity: 1;
 }
 
-/****************************************************************** FOOTER */
+/* footer */
 
-footer{
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+#footer{
+    width: 30%;
+}
+
+#footer .text-section{
+    display: block;
+}
+
+@media (max-width: 768px){
+    #footer{
+        width: 60%;
+    }
 }
