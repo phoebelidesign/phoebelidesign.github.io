@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Phoebe is a New Zealand-born Chinese woman. She is also a Narrm/Melbourne-based visual designer specialising in publication, typography, photography and research.">
+    <meta name="description" content="Phoebe is a New Zealand-born Chinese woman. She is also a Narrm/Melbourne-based visual projectser specialising in publication, typography, photography and research.">
     <title>Phoebe Li</title>
     <script src="JS/scripts.js" defer></script>
+    <script src="/JS/slides.js"></script>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/png" href="Assets/Images/favicon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://use.typekit.net/ton8ixe.css">
-    <!-- Preload imgs -->
     <link rel="preload" href="Assets/Images/totot_thumb.webp" as="image">
     <link rel="preload" href="Assets/Images/wm_thumb.webp" as="image">
     <link rel="preload" href="Assets/Images/jfn_thumb.webp" as="image">
@@ -22,51 +22,366 @@
 </head>
 <body>
     <div id="main-content">
-        <a href="/" class="home-link inactive">Phoebe Li</a><a class="page-title inactive" id="page-title">: Portfolio</a>
         <nav class="navbar" role="navigation" aria-label="main navigation">
-            <ul class="navbar-menu">
-                <li><a href="/">Phoebe Li</a></li>
-                <li><button class="filter-btn" data-category="Design">: Design</button></li>
-                <li><button class="filter-btn" data-category="Photo">: Photo</button></li>
-                <li><button class="filter-btn" data-category="Motion">: Motion</button></li>
-                <li><a href="info">Info</a></li>
-                <li><button id="playPauseBtn" class="playPauseBtn" aria-label="play/pause audio"><i class="fas fa-play"></i></button></li>
-            </ul>            
+            <div class="nav-top-left">
+                <button class="filter-btn" data-category="Projects">Projects</button>
+            </div>
+            <div class="nav-top-right">
+                <button class="filter-btn" data-category="Fascinations">Fascinations</button>
+            </div>
+            <div class="nav-bottom-left">
+                <a href="#info">Info</a>
+            </div>
+            <div class="nav-bottom-right">
+                <button id="playPauseBtn" class="playPauseBtn" aria-label="play/pause audio">Play</button>
+            </div>
         </nav>
         <main>
-            <div class="portfolio-container">
-                <a href="work" class="link" style="top: 11%; left: 41%;" data-category="Design">
+            <div class="home-container">
+                <a href="/" class="home-link">Phoebe Li</a><a class="page-title inactive" id="page-title">:</a>
+                <!--Filter:Projects-->
+                <a href="#type-on-types-of-type" class="link" style="top: 11%; left: 41%;" data-category="Projects">
                     Type on Types of Type
                     <img src="Assets/Images/totot_thumb.webp" class="hover-img">
                 </a>
-                <a href="work#waking-moment" class="link" style="top: 57%; left: 36%;" data-category="Motion">
+                <a href="#waking-moment" class="link" style="top: 57%; left: 36%;" data-category="Projects">
                     Waking Moment
                     <img src="Assets/Images/wm_thumb.webp" class="hover-img">
                 </a>
-                <a href="work#just-for-now" class="link" style="top: 34%; left: 61%;" data-category="Design Photo">
+                <a href="#just-for-now" class="link" style="top: 76%; left: 61%;" data-category="Projects">
                     Just For Now
                     <img src="Assets/Images/jfn_thumb.webp" class="hover-img">
                 </a>
-                <a href="work#eurostile-specimen" class="link" style="top: 23%; left: 67%;" data-category="Design">
+                <a href="#eurostile-specimen" class="link" style="top: 23%; left: 67%;" data-category="Projects">
                     Eurostile Specimen
                     <img src="Assets/Images/es_thumb.webp" class="hover-img">
                 </a>
-                <a href="work#counterpart" class="link" style="top: 23%; left: 21%;" data-category="Design">
+                <a href="#counterpart" class="link" style="top: 23%; left: 21%;" data-category="Projects">
                     Counterpart
                     <img src="Assets/Images/ctp_thumb.webp" class="hover-img">
                 </a>
-                <a href="work#kusama" class="link" style="top: 73%; left: 56%;" data-category="Design">
+                <a href="#kusama" class="link" style="top: 73%; left: 56%;" data-category="Projects">
                     Kusama
                     <img src="Assets/Images/kusama_thumb.webp" class="hover-img">
                 </a>
-                <a href="work#be-unfinished" class="link" style="top: 66%; left: 15%;" data-category="Design"> 
+                <a href="#be-unfinished" class="link" style="top: 66%; left: 15%;" data-category="Projects"> 
                     The nature of existence is to be unfinished
                     <img src="Assets/Images/bu_thumb.webp" class="hover-img">
                 </a>
-                <a href="work#caribbean-blue" class="link" style="top: 64%; left: 81%;" data-category="Photo">
+                <a href="#caribbean-blue" class="link" style="top: 64%; left: 81%;" data-category="Projects">
                     Caribbean Blue
                     <img src="Assets/Images/cb_thumb.webp" class="hover-img">
                 </a>
+                <!--Filter:Fascinations-->
+                <a href="https://youtu.be/Kpc9AcQTB7U?si=52f1t6lk2UDTKBcb" target="_blank" class="link" style="top: 31%; left: 46%;" data-category="Fascinations">
+                    Pagan poetry on fingerstyle guitar
+                </a>
+                <a href="https://archive.org/details/fantastic-planet__1973" target="_blank" class="link" style="top: 36%; left: 39%;" data-category="Fascinations">
+                    Fantastic planet
+                </a>
+                <a href="https://youtu.be/FEkOYs6aWIg?si=-mK3U0Sdp8DCRvIX" target="_blank" class="link" style="top: 51%; left: 66%;" data-category="Fascinations">
+                    Absolutely (film)
+                </a>
+                <a href="Assets/Images/hilma-af-klint_tree-of-knowledge-no.5.jpg" target="_blank" class="link" style="top: 69%; left: 85%;" data-category="Fascinations">
+                    Tree of knowledge no. 5
+                </a>
+                <a href="https://youtu.be/7z3qeeTkoNk?si=WtSMro_WU0V_qQpq" target="_blank" class="link" style="top: 85%; left: 26%;" data-category="Fascinations">
+                    Lynx in northern minnesota
+                </a>
+                <a href="https://youtu.be/Ikl-64rmOYs?si=si7w_LS9jZxKZ2G2" target="_blank" class="link" style="top: 40%; left: 25%;" data-category="Fascinations">
+                    The predatory wasp of the palisades is out to get us!
+                </a>
+            </div>
+            <!--Projects-->
+            <div class="project-page" id="type-on-types-of-type">
+                <div class="image-section">
+                    <div class="slideContainer" data-carousel="carousel-1">
+                        <div class="slide"><img src="../Assets/Images/totot-0.webp"></div>
+                        <div class="slide"><img src="../Assets/Images/totot-2.webp"></div>
+                        <div class="slide"><img src="../Assets/Images/totot-3.webp"></div>
+                        <div class="slide"><img src="../Assets/Images/totot-8.webp"></div>
+                        <div class="slide"><img src="../Assets/Images/totot.webp"></div>
+                        <div class="slide"><img src="../Assets/Images/totot-11.webp"></div>
+                        <div class="slide"><img src="../Assets/Images/totot-13.webp"></div>
+                        <div class="slide"><img src="../Assets/Images/totot-14.webp"></div>
+                        <div class="slide"><img src="../Assets/Images/totot2.webp"></div>
+                        <div class="slide"><img src="../Assets/Images/totot-10.webp"></div>
+                        <div class="slide"><img src="../Assets/Images/totot-7.webp"></div>
+                        <div class="slide"><img src="../Assets/Images/totot-22.webp"></div>
+                        <div class="slide"><img src="../Assets/Images/totot-23.webp"></div>
+                        <div class="slide"><img src="../Assets/Images/totot-24.webp"></div>
+                        <div class="navOverlay" id="navOverlay"></div>
+                    </div>
+                    <div style="text-align:center" class="carousel-dots" data-carousel="carousel-1">
+                        <span class="dot" onclick="currentSlide(1, 'carousel-1')"></span>
+                        <span class="dot" onclick="currentSlide(2, 'carousel-1')"></span>
+                        <span class="dot" onclick="currentSlide(3, 'carousel-1')"></span>
+                        <span class="dot" onclick="currentSlide(4, 'carousel-1')"></span>
+                        <span class="dot" onclick="currentSlide(5, 'carousel-1')"></span>
+                        <span class="dot" onclick="currentSlide(6, 'carousel-1')"></span>
+                        <span class="dot" onclick="currentSlide(7, 'carousel-1')"></span>
+                        <span class="dot" onclick="currentSlide(8, 'carousel-1')"></span>
+                        <span class="dot" onclick="currentSlide(9, 'carousel-1')"></span>
+                        <span class="dot" onclick="currentSlide(10, 'carousel-1')"></span>
+                        <span class="dot" onclick="currentSlide(11, 'carousel-1')"></span>
+                        <span class="dot" onclick="currentSlide(12, 'carousel-1')"></span>
+                        <span class="dot" onclick="currentSlide(13, 'carousel-1')"></span>
+                        <span class="dot" onclick="currentSlide(14, 'carousel-1')"></span>
+                    </div>
+                </div>
+                <div class="text-section">
+                    <div class="project-title"><p>Type on Types of Type</p></div>
+                    <div class="project-year"><p>2025</p></div>
+                    <div class="project-type"><p>Publication</p></div>
+                    <div class="project-description">
+                        <p>An anthology of essays on different approaches to typography within publication design. Curated, edited and typeset as an informative yet approachable gateway into typographic principles, for design students as well as any curious reader.</p>
+                        <p>Includes self-written introduction and original images. Printed on bulky newsprint and semi-transparent polypropolene; handbound with fishing wire.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="project-page" id="waking-moment">
+                <div class="image-section">
+                    <div class="video-container">
+                        <iframe src="https://player.vimeo.com/video/833038621?h=9298c17d98?color=ffffff&title=0&byline=0&portrait=0" width="100%" frameborder="1" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="text-section">
+                    <div class="project-title"><p>Waking Moment</p></div>
+                    <div class="project-year"><p>2023</p></div>
+                    <div class="project-type"><p>Short film</p></div>
+                    <div class="project-description">
+                        <p>An experimental short film on moments of stillness; decisive and fleeting. Like objects left in darkness picking up faint flickers of reflected light. Inspired by excerpt <q>I need only pause before it and I forget the passage of time,</q> from <a href="../Assets/Images/in-praise-of-shadows.pdf" target="_blank"><i>In Praise of Shadows—Jun’ichiro Tanizaki</i></a>.</p>
+                        <p>Frames include digital video and 35mm film stills, collaged and scanned. Sound includes found audio and edited instrumental from <a href="https://open.spotify.com/track/6vTtCOimcPs5H1Jr9d0Aep?si=6431aa5c2adc4a7f" target="_blank"><i>Sour Times—Portishead</i></a>.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="project-page" id="just-for-now">
+                <div class="image-section">
+                    <div class="slideContainer" data-carousel="carousel-2">
+                        <div class="slide"><img src="../Assets/Images/jfn-0.webp"></div>
+                        <div class="slide"><img src="../Assets/Images/jfn-2.webp"></div>
+                        <div class="slide"><img src="../Assets/Images/jfn-3.webp"></div>
+                        <div class="slide"><img src="../Assets/Images/jfn-5.webp"></div>
+                        <div class="slide"><img src="../Assets/Images/jfn-7.webp"></div>
+                        <div class="slide"><img src="../Assets/Images/jfn-6.webp"></div>
+                        <div class="slide"><img src="../Assets/Images/jfn-20.webp"></div>
+                        <div class="slide"><img src="../Assets/Images/jfn-12.webp"></div>
+                        <div class="slide"><img src="../Assets/Images/jfn-9.webp"></div>
+                        <div class="slide"><img src="../Assets/Images/jfn-10.webp"></div>
+                        <div class="slide"><img src="../Assets/Images/jfn-15.webp"></div>
+                        <div class="slide"><img src="../Assets/Images/jfn-16.webp"></div>
+                        <div class="slide"><img src="../Assets/Images/jfn-17.webp"></div>
+                        <div class="slide"><img src="../Assets/Images/jfn-19.webp"></div>
+                        <div class="navOverlay" id="navOverlay"></div>
+                    </div>
+                    <div style="text-align:center" class="carousel-dots" data-carousel="carousel-2">
+                        <span class="dot" onclick="currentSlide(1, 'carousel-2')"></span>
+                        <span class="dot" onclick="currentSlide(2, 'carousel-2')"></span>
+                        <span class="dot" onclick="currentSlide(3, 'carousel-2')"></span>
+                        <span class="dot" onclick="currentSlide(4, 'carousel-2')"></span>
+                        <span class="dot" onclick="currentSlide(5, 'carousel-2')"></span>
+                        <span class="dot" onclick="currentSlide(6, 'carousel-2')"></span>
+                        <span class="dot" onclick="currentSlide(7, 'carousel-2')"></span>
+                        <span class="dot" onclick="currentSlide(8, 'carousel-2')"></span>
+                        <span class="dot" onclick="currentSlide(9, 'carousel-2')"></span>
+                        <span class="dot" onclick="currentSlide(10, 'carousel-2')"></span>
+                        <span class="dot" onclick="currentSlide(11, 'carousel-2')"></span>
+                        <span class="dot" onclick="currentSlide(12, 'carousel-2')"></span>
+                        <span class="dot" onclick="currentSlide(13, 'carousel-2')"></span>
+                        <span class="dot" onclick="currentSlide(14, 'carousel-2')"></span>
+                    </div>
+                </div>
+                <div class="text-section">
+                    <div class="project-title"><p>Just For Now</p></div>
+                    <div class="project-year"><p>2024</p></div>
+                    <div class="project-type"><p>Publication, Photography</p></div>
+                    <div class="project-description">
+                        <p>A photobook documenting observations of a brief odyssey. Quiet moments and visual notes are collected as messages meant for home.</p>
+                        <p>Shot on 35mm film and digital. Handbound with thread and wrapped in embroidered dust jacket (although it is suspected to produce more debris than it fends off).</p>
+                    </div>
+                </div>
+            </div>
+            <div class="project-page" id="eurostile-specimen">
+                <div class="image-section">
+                    <div class="slideContainer" data-carousel="carousel-3">
+                        <div class="slide"><img src="../Assets/Images/es-1.webp"></div>
+                        <div class="slide"><img src="../Assets/Images/es-2.webp"></div>
+                        <div class="slide"><img src="../Assets/Images/es-3.webp"></div>
+                        <div class="slide"><img src="../Assets/Images/es-4.webp"></div>
+                        <div class="slide"><img src="../Assets/Images/es-5.webp"></div>
+                        <div class="navOverlay" id="navOverlay"></div>
+                    </div>
+                    <div style="text-align:center" class="carousel-dots" data-carousel="carousel-3">
+                        <span class="dot" onclick="currentSlide(1, 'carousel-3')"></span>
+                        <span class="dot" onclick="currentSlide(2, 'carousel-3')"></span>
+                        <span class="dot" onclick="currentSlide(3, 'carousel-3')"></span>
+                        <span class="dot" onclick="currentSlide(4, 'carousel-3')"></span>
+                        <span class="dot" onclick="currentSlide(5, 'carousel-3')"></span>
+                    </div>
+                </div>
+                <div class="text-section">
+                    <div class="project-title"><p>Eurostile Specimen</p></div>
+                    <div class="project-year"><p>2024</p></div>
+                    <div class="project-type"><p>Typography</p></div>
+                    <div class="project-description">
+                        <p>An experimental type specimen for <i>Eurostile</i>, a 1962 typeface by Aldo Novarese. He described <i>Eurostile</i> as a <q>synthetic expression of (their) times,</q> designing the typeface as a symbol of 60’s civilisation, drawing inspiration from the geometric forms of mid-century architecture and design such as the period’s train windows and television frames.</p>
+                        <p>The specimen is therefore inspired by architectural blueprints and their traditional cyanotype process.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="project-page" id="counterpart">
+                <div class="image-section">
+                    <div class="slideContainer" data-carousel="carousel-4">
+                        <div class="slide"><img src="../Assets/Images/ctp-1.webp"></div>
+                        <div class="slide"><img src="../Assets/Images/ctp-2.webp"></div>
+                        <div class="slide"><img src="../Assets/Images/ctp-3.webp"></div>
+                        <div class="slide"><img src="../Assets/Images/ctp-4.webp"></div>
+                        <div class="slide"><img src="../Assets/Images/ctp-5.webp"></div>
+                        <div class="navOverlay" id="navOverlay"></div>
+                    </div>
+                    <div style="text-align:center" class="carousel-dots" data-carousel="carousel-4">
+                        <span class="dot" onclick="currentSlide(1, 'carousel-4')"></span>
+                        <span class="dot" onclick="currentSlide(2, 'carousel-4')"></span>
+                        <span class="dot" onclick="currentSlide(3, 'carousel-4')"></span>
+                        <span class="dot" onclick="currentSlide(4, 'carousel-4')"></span>
+                        <span class="dot" onclick="currentSlide(5, 'carousel-4')"></span>
+                    </div>
+                </div>
+                <div class="text-section">
+                    <div class="project-title"><p>Counterpart</p></div>
+                    <div class="project-year"><p>2024</p></div>
+                    <div class="project-type"><p>Publication</p></div>
+                    <div class="project-description">
+                        <p>An experimental newspaper reflecting on my lived experience of twinhood. My identity exists as a constituent of a whole; what is the line between symmetry and duality?</p>
+                        <p>Includes original photography and text. Printed on 45gsm newsprint; the tabloid format is used as a nod towards the commodification and misinterpretation of twin identity in the media.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="project-page" id="kusama">
+                <div class="image-section">
+                    <img src="../Assets/Images/kusama.webp" alt="Text cut-outs collaged onto pale yellow paper using masking tape; an experiment on typography as a tool for composition.">
+                </div>
+                <div class="text-section">
+                    <div class="project-title"><p>Kusama</p></div>
+                    <div class="project-year"><p>2023</p></div>
+                    <div class="project-type"><p>Typography</p></div>
+                    <div class="project-description">
+                        <p>Concept poster design for a Yayoi Kusama 2021 MONA exhibition, crafted with paper and masking tape.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="project-page" id="be-unfinished">
+                <div class="image-section">
+                    <div class="slideContainer" data-carousel="carousel-5">
+                        <div class="slide"><img src="../Assets/Images/bu-1.webp"></div>
+                        <div class="slide"><img src="../Assets/Images/bu-2.webp"></div>
+                        <div class="slide"><img src="../Assets/Images/bu-3.webp"></div>
+                        <div class="slide"><img src="../Assets/Images/bu-4.webp"></div>
+                        <div class="slide"><img src="../Assets/Images/bu-5.webp"></div>
+                        <div class="slide"><img src="../Assets/Images/bu-6.webp"></div>
+                        <div class="slide"><img src="../Assets/Images/bu-7.webp"></div>
+                        <div class="slide"><img src="../Assets/Images/bu-8.webp"></div>
+                        <div class="slide"><img src="../Assets/Images/bu-9.webp"></div>
+                        <div class="navOverlay" id="navOverlay"></div>
+                    </div>
+                    <div style="text-align:center" class="carousel-dots" data-carousel="carousel-5">
+                        <span class="dot" onclick="currentSlide(1, 'carousel-5')"></span>
+                        <span class="dot" onclick="currentSlide(2, 'carousel-5')"></span>
+                        <span class="dot" onclick="currentSlide(3, 'carousel-5')"></span>
+                        <span class="dot" onclick="currentSlide(4, 'carousel-5')"></span>
+                        <span class="dot" onclick="currentSlide(5, 'carousel-5')"></span>
+                        <span class="dot" onclick="currentSlide(6, 'carousel-5')"></span>
+                        <span class="dot" onclick="currentSlide(7, 'carousel-5')"></span>
+                        <span class="dot" onclick="currentSlide(8, 'carousel-5')"></span>
+                        <span class="dot" onclick="currentSlide(9, 'carousel-5')"></span>
+                    </div>
+                </div>
+                <div class="text-section">
+                    <div class="project-title"><p>The nature of existence...</p></div>
+                    <div class="project-year"><p>2025</p></div>
+                    <div class="project-type"><p>Publication</p></div>
+                    <div class="project-description">
+                        <p>A pocket-sized collection of prompts, observations and strategies, for the thinker who: worries about appearing unrefined in the presence of others; feels the need to preface before sharing anthing; wonders if they are “living up to their potential”. The collection is a reminder to value progress over perfection (trite but true). Includes excerpts from <a href="../Assets/Images/fluxus-performance-workbook.pdf" target="_blank"><i>Fluxus Performance Workbook</i></a> and <a href="../Assets/Images/oblique-strategies.pdf" target="_blank"><i>Oblique Strategies</i></a>.</p>
+                        <p>Printed on 50gsm washi paper and impermanently bound by pins. Pages may be added as the reader wishes, as an ongoing reminder that it is natural to be ‘unfinished’.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="project-page" id="caribbean-blue">
+                <div class="image-section">
+                    <div class="slideContainer" data-carousel="carousel-7">
+                        <div class="slide"><img src="../Assets/Images/cb-1.webp"></div>
+                        <div class="slide"><img src="../Assets/Images/cb-2.webp"></div>
+                        <div class="slide"><img src="../Assets/Images/cb-3.webp"></div>
+                        <div class="slide"><img src="../Assets/Images/cb-4.webp"></div>
+                        <div class="slide"><img src="../Assets/Images/cb-5.webp"></div>
+                        <div class="slide"><img src="../Assets/Images/cb-6.webp"></div>
+                        <div class="slide"><img src="../Assets/Images/cb-7.webp"></div>
+                        <div class="slide"><img src="../Assets/Images/cb-8.webp"></div>
+                        <div class="slide"><img src="../Assets/Images/cb-9.webp"></div>
+                        <div class="navOverlay" id="navOverlay"></div>
+                    </div>
+                    <div style="text-align:center" class="carousel-dots" data-carousel="carousel-7">
+                        <span class="dot" onclick="currentSlide(1, 'carousel-7')"></span>
+                        <span class="dot" onclick="currentSlide(2, 'carousel-7')"></span>
+                        <span class="dot" onclick="currentSlide(3, 'carousel-7')"></span>
+                        <span class="dot" onclick="currentSlide(4, 'carousel-7')"></span>
+                        <span class="dot" onclick="currentSlide(5, 'carousel-7')"></span>
+                        <span class="dot" onclick="currentSlide(6, 'carousel-7')"></span>
+                        <span class="dot" onclick="currentSlide(7, 'carousel-7')"></span>
+                        <span class="dot" onclick="currentSlide(8, 'carousel-7')"></span>
+                        <span class="dot" onclick="currentSlide(9, 'carousel-7')"></span>
+                    </div>
+                </div>
+                <div class="text-section">
+                    <div class="project-title"><p>Caribbean Blue</p></div>
+                    <div class="project-year"><p>2023</p></div>
+                    <div class="project-type"><p>Photography</p></div>
+                    <div class="project-description">
+                        <p>A series in response to the chromatic impulse: the aversion of colour; a mistrust of colour; a fear of contamination or corruption through colour (<a href="../Assets/Images/chromophobia.pdf" target="_blank"><i>Chromophobia—David Batchelor</i></a>). How could colour ever be considered something ‘foreign’ and unworthy of serious consideration when the natural world offers so much?</p>
+                        <p>A journey through place, from land to beyond, shot on 35mm film. Across the open sky, up mountains, down cliffs, and out to the endless sea. Colour is neither trivial nor threatening, it is the essence of life itself.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="section-divider">
+                <img src="Assets/Images/favicon.png">
+            </div>
+            <!--Info-->
+            <div class="project-page" id="info">
+                <div class="text-section">
+                    <p>Phoebe is a New Zealand-born Chinese woman. She is also a Narrm/Melbourne-based communication designer who explores the visual and storytelling potential of publication, typography and photography through research, strategy and experimentation, because she is a curious person and the opportunity to shape the way things are seen and understood by the world intrigues her. She designs in hopes to contribute to a future of more sustainability, care and connection.</p>
+                    <p>Her practice often explores specific documentation and the personal archive (what actually matters?), and involves a process infused with analogue methods (things that are actually composed of matter).</p>
+                    <br>
+                    <p>Website designed and developed by Phoebe. Resume available upon request.</p>
+                    <br>
+                    <p>Say hello:</p>
+                </div>
+                <div class="postcard-front">
+                    <div class="slideContainer" data-carousel="carousel-p">
+                        <div class="slide"><img src="Assets/Images/p1.webp"></div>
+                        <div class="slide"><img src="Assets/Images/p2.webp"></div>
+                        <div class="slide"><img src="Assets/Images/p3.webp"></div>
+                        <div class="slide"><img src="Assets/Images/p4.webp"></div>
+                        <div class="slide"><img src="Assets/Images/p5.webp"></div>
+                        <div class="slide"><img src="Assets/Images/p7.webp"></div>
+                        <div class="slide"><img src="Assets/Images/p8.webp"></div>
+                        <div class="slide"><img src="Assets/Images/p9.webp"></div>
+                        <div class="slide"><img src="Assets/Images/p10.webp"></div>
+                        <div class="navOverlay"></div>
+                        <div class="postcard-hover-label">choose a postcard</div>
+                    </div>
+                    <div class="postcard-back">
+                        <div class="postcard-back-image">
+                            <img src="Assets/Images/p-back.webp">
+                            <div class="postcard-form-overlay">
+                                <input type="text" name="name" placeholder="Name" class="postcard-input">
+                                <input type="email" name="email" placeholder="Email" class="postcard-input">
+                                <textarea name="message" placeholder="Write something..." class="postcard-textarea"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="postcard-send" id="postcard-send">Send</button>
+                <p class="postcard-success" id="postcard-success">Sent!</p>
             </div>
         </main>
         <footer>

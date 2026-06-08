@@ -12,21 +12,25 @@
     <link rel="preload" href="/Assets/Images/IMG_1509.webp" as="image">
 </head>
 <body>
-    <a href="/" class="home-link">Phoebe Li</a><a class="page-title inactive">: Info</a>
+    <a href="/" class="home-link">Phoebe Li</a><a class="page-title inactive">Info</a>
     <nav class="navbar" role="navigation" aria-label="main navigation">
-        <ul class="navbar-menu">
-            <li><a href="/">Phoebe Li</a></li>
-            <li><a href="/?category=Design" class="filter-btn">: Design</a></li>
-            <li><a href="/?category=Photo" class="filter-btn">: Photo</a></li>
-            <li><a href="/?category=Motion" class="filter-btn">: Motion</a></li>
-            <li><a href="/info" class="active">Info</a></li>
-            <li><button id="playPauseBtn" class="playPauseBtn" aria-label="play/pause audio"><i class="fas fa-play"></i></button></li>
-        </ul>            
+        <div class="nav-top-left">
+            <a href="../?category=Projects" class="filter-btn">Projects</a>
+        </div>
+        <div class="nav-top-right">
+            <a href="../?category=Fascinations" class="filter-btn">Fascinations</a>
+        </div>
+        <div class="nav-bottom-left">
+            <a href="../info">Info</a>
+        </div>
+        <div class="nav-bottom-right">
+            <button id="playPauseBtn" class="playPauseBtn" aria-label="play/pause audio">Play</button>
+        </div>
     </nav>
     <main>
         <div class="info-page">
             <div class="text-section">
-                <p>Phoebe is a New Zealand-born Chinese woman. She is also a Narrm/Melbourne-based visual designer specialising in publication, typography, photography and research.</p>
+                <p>Phoebe is a New Zealand-born Chinese woman. She is also a Narrm/Melbourne-based communication designer who explores the visual and storytelling potential of publication, typography and photography through research, strategy and experimentation, because she is a curious person and the opportunity to shape the way things are seen and understood by the world intrigues her. She designs in hopes to contribute to a future of more sustainability, care and connection.</p>
                 <p>Her practice often explores specific documentation and the personal archive (what actually matters?), and involves a process infused with analogue methods (things that are actually composed of matter).</p>
                 <p>Website designed and developed by Phoebe. Resume available upon request.</p>
                 <br>
@@ -38,6 +42,7 @@
             </div>
             <div class="image-section">
                 <img src="/Assets/Images/IMG_1509.webp" alt="Phoebe Li">
+                <img src="/Assets/Images/IMG_1509 copy.webp">
             </div>
         </div>
     </main>
@@ -47,7 +52,6 @@
                 <source src="/Assets/Audio/spring-is-coming.mp3" type="Audio/mp3">
             </Audio>
         </div>
-        <h4><a href="https://youtu.be/Kpc9AcQTB7U?si=vvuBWYej-mAjtIFk" target="_blank">Stay curious...</a></h4>
     </footer>
     <div id="tooltip">a tune while you look</div>
 </body>

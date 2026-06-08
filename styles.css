@@ -1,68 +1,42 @@
-@font-face {
+@font-face{
     font-family: 'pantasia';
     src: url('Assets/Fonts/Pantasia-Regular.ttf') format('truetype');
 }
 
-@font-face {
+@font-face{
     font-family: 'arketa';
     src: url('Assets/Fonts/OOArketa-Light.otf') format('truetype');
 }
 
-/*************************************************************************************************************************** TEXT */
-h1,h2,h3,h4,p{
-    font-family: 'ibm-plex-mono', serif;
-    font-weight: 300;
+/****************************************************************** TEXT */
+
+p,a{
+    font-family: 'adobe-garamond-pro', 'times new roman', serif;
+    font-weight: normal;
     font-style: normal;
+    font-size: 0.9em;
     margin-top: 0;
     margin-bottom: 0;
+    font-variant-numeric: oldstyle-nums;
 }
 
-h1{ /* project heading */
-    font-family: 'pantasia';
-    font-size: 1.5em;
-}
-
-h2{ /* project subheading */
-    font-size: 0.8em;
-    text-transform: uppercase;
-    margin-top: 1em;
-    margin-bottom: 1em;
-}
-
-p{ /* project description, info */
-    font-size: 0.8em;
-}
-
-p + p {
+p+p{
     text-indent: 2em;
 }
 
-h3{ /* acknowledgement */
-    font-size: 0.6em;
-}
-
-h4{ /* copyright */
-    text-align: center;
-    font-size: 0.8em;
-    margin-bottom: 2em;
-}
-
-#tooltip {
-    font-size: 0.8em !important;
-    position: absolute;
-    color: black;
-    padding: 5px;
-    font-family: 'pantasia', 'ibm-plex-mono', serif;
-    font-weight: 300;
+#tooltip{
+    font-family: 'adobe-garamond-pro', 'times new roman', serif;
+    font-weight: normal;
     font-style: normal;
-    border-radius: 0px;
+    font-size: 0.9em !important;
+    position: absolute;
     pointer-events: none;
     opacity: 0;
     transition: opacity 0.2s ease-in-out;
     white-space: nowrap;
 }
 
-a{ /* links */
+a{
     text-decoration: none;
     color: black;
 }
@@ -71,134 +45,108 @@ a:hover{
     text-decoration: underline;
 }
 
-/*************************************************************************************************************************** NAVBAR */
-
-/* home link */
-.home-link, .page-title{
-    font-family: 'pantasia', 'ibm-plex-mono', serif;
-    position: fixed;
-    bottom: 20px;
-    font-size: 6vw;
-    z-index: 9999;
-    white-space: nowrap;
-}
-
-.home-link{
-    left: 50px
-}
-
-.page-title{
-    right: 50px
-}
-
-.home-link.inactive, .page-title.inactive{
-    pointer-events: none;
-}
-
-@media (max-width: 768px){
-    .hide-on-mobile {
-        display: none !important;
-    }
-}
+/****************************************************************** NAVBAR */
 
 /* navbar */
+
 .navbar{
-    padding: 30px 70px 30px 50px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 999;
 }
 
-.navbar-menu{
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    width: 100%;
+/* enable interaction */
+.navbar a,
+.navbar button{
+    pointer-events: auto;
+    font-family: 'adobe-garamond-pro', 'times new roman', serif;
 }
 
-.navbar ul{
-    display: flex;
+.nav-top-left,
+.nav-top-right,
+.nav-bottom-left,
+.nav-bottom-right{
+    position: fixed;
 }
-  
-.navbar li a{
-    text-decoration: none;
+
+.nav-top-left{
+    top: 30px;
+    left: 50px;
+}
+
+.nav-top-right{
+    top: 30px;
+    right: 50px;
+}
+
+.nav-bottom-left{
+    bottom: 30px;
+    left: 50px;
+}
+
+.nav-bottom-right{
+    bottom: 30px;
+    right: 50px;
+}
+
+/* links + buttons */
+
+.navbar a,
+.filter-btn{
     color: black;
-    font-family: 'pantasia', 'ibm-plex-mono', serif;   
+    text-decoration: none;
     white-space: nowrap;
-}
-  
-.navbar li a:hover, .navbar li button.filter-btn:hover{
-    text-decoration: underline;
-    opacity: 1;
+    font-size: 1rem;
 }
 
-.navbar .active{
-    text-decoration: underline;
-}
+/* filter buttons */
 
-/* match button style to navbar */
-.navbar li button.filter-btn{
+.filter-btn{
     background: none;
     border: none;
     padding: 0;
     margin: 0;
-    font: inherit;
-    color: black;
-    font-family: 'pantasia', 'ibm-plex-mono', serif;
-    text-decoration: none;
     cursor: pointer;
-    white-space: nowrap;
 }
 
-.navbar li button.filter-btn.active{
+.navbar a:hover,
+.filter-btn:hover,
+.filter-btn.active{
     text-decoration: underline;
 }
 
+/* play button */
+
 #playPauseBtn{
     border: none;
-    border-radius: 50%;
+    background: transparent;
     cursor: pointer;
-    background-color: transparent;
-    padding: 3px;
-    position: fixed;
+    padding: 0;
+    font-size: 1em;
 }
 
-@media (max-width:480px){
-    .filter-btn{
-        display: none;
-    }
-    .playPauseBtn{
-        display: none;
-    }
-    .navbar{
-        padding: 30px 10px 30px 50px;
-    }
+#playPauseBtn:hover{
+    text-decoration: underline;
 }
 
-/*************************************************************************************************************************** HOME */
+/****************************************************************** HOME */
+
+html{
+    scroll-behavior: smooth;
+}
 
 body{
     scroll-behavior: smooth;
     overscroll-behavior: none;
-    background: none no-repeat center center fixed;
-    background-size: cover;
-}
-
-body,ul{
     overflow-x: hidden;
     margin: 0;
     padding: 0;
     height: 100%;
 }
 
-ul{
-    list-style: none;
-}
-
 main{
-    padding: 25px 50px;
+    padding: 100px 50px;
     display: flex;
     flex-direction: column;
     gap: 100px;
@@ -208,38 +156,43 @@ img{
     width: 100%;
 }
 
-.portfolio-container{
+/* home page */
+
+.home-container{
     position: relative;
     width: 100%;
     min-height: 80vh;
     overflow: hidden;
 }
 
-.project{
+.home-link, .page-title{
+    font-family: 'adobe-garamond-pro', 'times new roman', serif;
+    top: 45%;
     position: absolute;
-    transform: translate(-50%, -50%);
-    opacity: 1;
-    cursor: pointer;
-    transition: transform 0.2s ease-in-out;
+    font-size: 5vw;
+    z-index: 999;
+    white-space: nowrap;
 }
 
-.project img{
-    max-width: 10vw;
-    max-height: 10vw;
-    width: auto;
-    height: auto;
-    object-fit: contain;
-    transition: transform 0.2s ease-in-out;
+.home-link{
+    left: 0px;
 }
 
-/* new index */
+.page-title{
+    right: 0px;
+}
 
-.portfolio-container .link{
+.home-link.inactive, .page-title.inactive{
+    pointer-events: none;
+}
+
+.home-container .link{
     position: absolute;
 }
 
 .link{
-    font-family: 'ibm-plex-mono', serif;
+    display: none;
+    font-family: 'ibm-plex-mono', 'adobe-garamond-pro', serif;
     font-size: 0.8em;
     text-transform: uppercase;
 }
@@ -247,11 +200,11 @@ img{
 .hover-img{
     display: none;
     position: fixed;
-    top: 48%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    max-width: 70vh;
-    max-height: 60vh;
+    max-width: 40vw;
+    max-height: 40vw;
     width: auto;
     height: auto;
     opacity: 1;
@@ -262,32 +215,35 @@ img{
     display: block;
 }
 
-/*************************************************************************************************************************** WORK */
+/****************************************************************** PROJECTS */
 
 .project-page{
     display: flex;
-    gap: 50px;
+    flex-direction: column;
+    align-self: center;
+    gap: 40px;
     position: relative;
-    scroll-margin-top: 100px;
-}
-
-#type-on-types-of-type{
-    padding-top: 0;
-}
-
-.text-section{
-    width: 30%;
+    scroll-margin-top: 50px;
+    width: 60%;
 }
 
 .image-section{
-    width: 70%;
     overflow-y: visible;
+}
+
+.text-section{
+    display: flex;
+    gap: 50px;
+}
+
+.project-title,
+.project-type{
+    white-space: nowrap;
 }
 
 .image-section img{
     max-width: 100%;
     height: auto;
-    padding-bottom: 0px;
 }
 
 .image-section::-webkit-scrollbar{
@@ -311,32 +267,22 @@ img{
     border: 0;
 }
 
-/* mobile - stack sections vertically */
-@media (max-width: 960px){
-    .project-page{
-        flex-direction: column;
-        padding: 0px 0px 50px;
-    }
-
+@media (max-width: 1280px){
     .text-section{
-        width: 100%;
-        padding-right: 0px;
-        position: static; /* remove sticky so it scrolls normally */
-        padding-bottom: 25px;
-        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
     }
+}
 
-    .image-section{
+@media (max-width: 768px){
+    .project-page{
         width: 100%;
-        padding-bottom: 0px;
-    }
-
-    .home-link img{
-        display: none;
     }
 }
 
 /* slides */
+
 .slideContainer{
     position: relative;
     margin-bottom: 5px;
@@ -374,42 +320,125 @@ img{
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 10;
+    z-index: 99;
 }
 .navOverlay.left-hover{
-    cursor: url('data:image/svg+xml;utf8,<svg fill="silver" height="50" viewBox="0 0 24 24" width="50" xmlns="http://www.w3.org/2000/svg"><path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6z"/></svg>') 35 35, auto;
+    cursor: url('data:image/svg+xml;utf8,<svg fill="lavender" height="50" viewBox="0 0 24 24" width="50" xmlns="http://www.w3.org/2000/svg"><path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6z"/></svg>') 35 35, auto;
 }
 .navOverlay.right-hover{
-    cursor: url('data:image/svg+xml;utf8,<svg fill="silver" height="50" viewBox="0 0 24 24" width="50" xmlns="http://www.w3.org/2000/svg"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg>') 35 35, auto;
+    cursor: url('data:image/svg+xml;utf8,<svg fill="lavender" height="50" viewBox="0 0 24 24" width="50" xmlns="http://www.w3.org/2000/svg"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg>') 35 35, auto;
 }
 
-/*************************************************************************************************************************** INFO */
+/****************************************************************** INFO */
+.section-divider{
+    display: block;
+    margin: 0 auto;
+    width: 2vw;
+    height: auto;
+}
 
-.info-page{
-    display: flex;
+#info{
+    width: 30%;
+}
+
+#info .text-section{
+    display: block;
+}
+
+@media (max-width: 768px){
+    #info{
+        width: 60%;
+    }
+}
+
+/* postcard */
+
+.postcard-back-image {
     position: relative;
-    justify-content: space-between;
 }
 
-.info-page .image-section{
-    width: 25%;
+.postcard-back-image img {
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
-@media (max-width: 960px){
-    .info-page{
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .info-page .image-section{
-        padding-top: 50px;
-        width: 50%;
-    }
+.postcard-form-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 8%; /* adjust to position the fields over the right area of template */
+    box-sizing: border-box;
+    gap: 4%;
 }
 
-/*************************************************************************************************************************** FOOTER */
+.postcard-input,
+.postcard-textarea {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    font-family: 'ibm-plex-mono', 'adobe-garamond-pro', serif;
+    font-size: 0.6em;
+    color: black;
+    outline: none;
+    width: 40%; /* adjust to fit template image */
+    padding: 2px 0;
+}
 
-footer {
+.postcard-textarea {
+    resize: none;
+    flex: 1;
+}
+
+.postcard-input::placeholder,
+.postcard-textarea::placeholder {
+    color: rgba(0,0,0,0.35);
+}
+
+.postcard-send {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font-family: 'adobe-garamond-pro', 'times new roman', serif;
+    font-size: 0.9em;
+}
+
+.postcard-send:hover {
+    text-decoration: underline;
+}
+
+.postcard-success {
+    display: none;
+    text-align: center;
+}
+
+.postcard-hover-label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'adobe-garamond-pro', 'times new roman', serif;
+    font-size: 0.9em;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    white-space: nowrap;
+    color: lavender;
+}
+
+.postcard-front:hover .postcard-hover-label {
+    opacity: 1;
+}
+
+/****************************************************************** FOOTER */
+
+footer{
     position: fixed;
     bottom: 0;
     width: 100%;

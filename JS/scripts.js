@@ -1,202 +1,289 @@
-// LISTEN TO A TUNE
+/***********************
+ LISTEN TO A TUNE (TOOLTIP)
+***********************/
 document.addEventListener("DOMContentLoaded", function () {
     const tooltip = document.getElementById("tooltip");
     const playPauseBtn = document.getElementById("playPauseBtn");
 
-    playPauseBtn.addEventListener("mouseenter", function () {
-        tooltip.style.opacity = "1"; // Show tooltip
-    });
+    if (playPauseBtn && tooltip) {
 
-    playPauseBtn.addEventListener("mouseleave", function () {
-        tooltip.style.opacity = "0"; // Hide tooltip
-    });
+        playPauseBtn.addEventListener("mouseenter", function () {
+            tooltip.style.opacity = "1";
+        });
 
-    playPauseBtn.addEventListener("mousemove", function (event) {
-        let tooltipWidth = tooltip.offsetWidth;
-        let tooltipHeight = tooltip.offsetHeight;
-        let pageWidth = window.innerWidth;
-        let pageHeight = window.innerHeight;
-        let offsetX = -45; // Space between mouse and tooltip
-        let offsetY = 10;
+        playPauseBtn.addEventListener("mouseleave", function () {
+            tooltip.style.opacity = "0";
+        });
 
-        let posX = event.pageX + offsetX;
-        let posY = event.pageY + offsetY;
+        playPauseBtn.addEventListener("mousemove", function (event) {
 
-        // Prevent tooltip from going off-screen (right)
-        if (posX + tooltipWidth > pageWidth) {
-            posX = event.pageX - tooltipWidth - offsetX;
-        }
+            let tooltipWidth = tooltip.offsetWidth;
+            let tooltipHeight = tooltip.offsetHeight;
 
-        // Prevent tooltip from going off-screen (bottom)
-        if (posY + tooltipHeight > pageHeight) {
-            posY = event.pageY - tooltipHeight - offsetY;
-        }
+            let offsetX = -20;
+            let offsetY = -15; // negative = always above cursor
 
-        tooltip.style.left = `${posX}px`;
-        tooltip.style.top = `${posY}px`;
-    });
+            let posX = event.pageX + offsetX;
+            let posY = event.pageY - tooltipHeight + offsetY;
+
+            // keep inside right edge
+            if (posX + tooltipWidth > window.innerWidth) {
+                posX = window.innerWidth - tooltipWidth - 10;
+            }
+
+            // keep inside left edge
+            if (posX < 10) {
+                posX = 10;
+            }
+
+            // keep inside top edge
+            if (posY < 10) {
+                posY = 10;
+            }
+
+            tooltip.style.left = `${posX}px`;
+            tooltip.style.top = `${posY}px`;
+        });
+    }
 });
 
-// Select elements
+
+/***********************
+ AUDIO SYSTEM
+***********************/
 const Audio = document.querySelector("#Audio");
 const playPauseBtn = document.querySelector("#playPauseBtn");
-const icon = playPauseBtn.querySelector("i");
 
-// Use BroadcastChannel for cross-page communication
 const AudioChannel = new BroadcastChannel("Audio_sync");
 
-// Load saved state when page loads
 window.addEventListener("DOMContentLoaded", () => {
+    if (!Audio || !playPauseBtn) return;
+
     const isPlaying = localStorage.getItem("AudioPlaying") === "true";
     const savedTime = parseFloat(localStorage.getItem("AudioTime")) || 0;
 
-    Audio.currentTime = savedTime; // Restore saved time
+    Audio.currentTime = savedTime;
 
     if (isPlaying) {
         Audio.play();
-        icon.classList.replace("fa-play", "fa-pause");
+        playPauseBtn.textContent = "Pause";
+    } else {
+        playPauseBtn.textContent = "Play";
     }
 
-    // Broadcast current state to other tabs to keep them in sync
     AudioChannel.postMessage({
         action: isPlaying ? "play" : "pause",
         time: savedTime
     });
 });
 
-// Toggle play/pause functionality
-playPauseBtn.addEventListener("click", () => {
-    if (Audio.paused) {
-        Audio.play();
-        localStorage.setItem("AudioPlaying", "true");
-        icon.classList.replace("fa-play", "fa-pause");
-    } else {
-        Audio.pause();
-        localStorage.setItem("AudioPlaying", "false");
-        icon.classList.replace("fa-pause", "fa-play");
-    }
-});
 
-// Listen for changes from other pages
+if (playPauseBtn && Audio) {
+    playPauseBtn.addEventListener("click", () => {
+
+        if (Audio.paused) {
+            Audio.play();
+            localStorage.setItem("AudioPlaying", "true");
+            playPauseBtn.textContent = "Pause";
+
+            AudioChannel.postMessage({
+                action: "play",
+                time: Audio.currentTime
+            });
+
+        } else {
+            Audio.pause();
+            localStorage.setItem("AudioPlaying", "false");
+            playPauseBtn.textContent = "Play";
+
+            AudioChannel.postMessage({
+                action: "pause",
+                time: Audio.currentTime
+            });
+        }
+    });
+}
+
+
 AudioChannel.addEventListener("message", (event) => {
+    if (!Audio || !playPauseBtn) return;
+
     if (event.data.action === "play") {
         setTimeout(() => {
             Audio.currentTime = event.data.time;
             Audio.play();
-        }, 100); // Small delay to prevent conflicts
-        icon.classList.replace("fa-play", "fa-pause");
+        }, 100);
+
+        playPauseBtn.textContent = "Pause";
         localStorage.setItem("AudioPlaying", "true");
+
     } else if (event.data.action === "pause") {
         Audio.pause();
-        icon.classList.replace("fa-pause", "fa-play");
+        playPauseBtn.textContent = "Play";
         localStorage.setItem("AudioPlaying", "false");
     }
 });
 
-// Save current time before navigating away
+
 window.addEventListener("beforeunload", () => {
-    localStorage.setItem("AudioTime", Audio.currentTime);
+    if (Audio) {
+        localStorage.setItem("AudioTime", Audio.currentTime);
+    }
 });
 
-// THUMBNAIL IMAGE ON HOVER
+
+/***********************
+ THUMBNAIL HOVER BACKGROUND
+***********************/
 document.addEventListener("DOMContentLoaded", function () {
     const projects = document.querySelectorAll(".link");
-
-    // Detect if device is touch/mobile
     const isMobile = window.innerWidth <= 768;
 
-    // Only apply hover logic on non-mobile devices
     if (!isMobile) {
         projects.forEach(project => {
+
             project.addEventListener("mouseenter", function () {
-                let imgSrc = this.querySelector("img").src;
-                let bgImage = imgSrc.replace("_thumb", "_bg"); // Adjust naming if needed
-    
+                let img = this.querySelector("img");
+                if (!img) return;
+
+                let bgImage = img.src.replace("_thumb", "_bg");
                 document.body.style.backgroundImage = `url(${bgImage})`;
-    
+
                 projects.forEach(p => {
                     if (p !== this) {
-                        p.style.opacity = "1"; // Fade out other thumbnails
-                        p.style.pointerEvents = "none"; // Disable interaction
+                        p.style.pointerEvents = "none";
                     }
                 });
             });
-    
+
             project.addEventListener("mouseleave", function () {
                 document.body.style.backgroundImage = "none";
-    
+
                 projects.forEach(p => {
-                    p.style.opacity = "1"; // Restore thumbnails
                     p.style.pointerEvents = "auto";
                 });
             });
         });
     }
+
+    // Hide hover image on link click
+    projects.forEach(p => {
+        p.addEventListener("click", function () {
+            const img = this.querySelector(".hover-img");
+            if (img) {
+                img.style.display = "none";
+                setTimeout(() => img.style.display = "", 2000);
+            }
+            document.body.style.backgroundImage = "none";
+        });
+    });
 });
 
-//DETECT PROJECT PAGES TO HIDE HOMELINK
-document.addEventListener("DOMContentLoaded", function () {
-    const homeLink = document.querySelector(".home-link");
-    const isProjectPage = window.location.pathname.includes("/Work/");
 
-    if (homeLink && isProjectPage && window.innerWidth <= 768) {
-        homeLink.classList.add("hide-on-mobile");
-    }
-});
-
-//FILTER
+/***********************
+ FILTER SYSTEM (MULTI-TOGGLE)
+***********************/
 document.addEventListener("DOMContentLoaded", function () {
     const projects = document.querySelectorAll(".link");
     const filterButtons = document.querySelectorAll(".filter-btn");
     const pageTitle = document.getElementById("page-title");
 
-    //update page-title by filter
-    filterButtons.forEach(button => {
-        button.addEventListener("click", function () {
-            const selectedCategory = this.dataset.category;
+    let activeCategories = [];
 
-            // Update visible projects
-            projects.forEach(project => {
-                const categories = project.dataset.category.split(" ");
-                project.style.display = (selectedCategory === "all" || categories.includes(selectedCategory))
-                    ? "block"
-                    : "none";
-            });
+    function updateProjects() {
+        if (activeCategories.length === 0) {
+            projects.forEach(p => p.style.display = "none");
+            pageTitle.textContent = ":";
+            return;
+        }
 
-            // Update page title text
-            pageTitle.textContent = `: ${selectedCategory}`;
-
-            // Underline active filter
-            filterButtons.forEach(btn => btn.classList.remove("active"));
-            this.classList.add("active");
-        });
-    });
-});
-
-//Filter buttons to act like normal navigation links, but also filter
-document.addEventListener("DOMContentLoaded", function () {
-    const projects = document.querySelectorAll(".link");
-    const pageTitle = document.getElementById("page-title");
-    const urlParams = new URLSearchParams(window.location.search);
-    const selectedCategory = urlParams.get("category");
-
-    if (selectedCategory) {
-        // Show only matching projects
         projects.forEach(project => {
             const categories = project.dataset.category.split(" ");
-            project.style.display = (selectedCategory === "all" || categories.includes(selectedCategory))
-                ? "block"
-                : "none";
+            const match = activeCategories.some(cat => categories.includes(cat));
+            project.style.display = match ? "block" : "none";
         });
 
-        // Update title
-        pageTitle.textContent = `: ${selectedCategory}`;
-
-        // Highlight active nav item (optional)
-        const activeLink = document.querySelector(`.filter-link[href*="${selectedCategory}"]`);
-        if (activeLink) {
-            document.querySelectorAll(".filter-link").forEach(link => link.classList.remove("active"));
-            activeLink.classList.add("active");
-        }
+        pageTitle.textContent = ": " + activeCategories.join(", ");
     }
+
+    projects.forEach(p => p.style.display = "none");
+
+    // Reset visual state only when user scrolls away from hero
+    window.addEventListener("scroll", function () {
+        if (window.scrollY > window.innerHeight * 0.5) {
+            filterButtons.forEach(btn => btn.classList.remove("active"));
+        }
+    });
+
+    filterButtons.forEach(btn => {
+        btn.addEventListener("click", function () {
+            const category = this.dataset.category;
+            const isScrolledDown = window.scrollY > window.innerHeight * 0.5;
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            // If coming from scrolled position, reset categories first
+            if (isScrolledDown) {
+                activeCategories = [];
+            }
+
+            // Normal toggle for both cases
+            if (activeCategories.includes(category)) {
+                activeCategories = activeCategories.filter(c => c !== category);
+                this.classList.remove("active");
+            } else {
+                activeCategories.push(category);
+                this.classList.add("active");
+            }
+
+            setTimeout(() => updateProjects(), 50);
+        });
+    });
+
+    updateProjects();
+});
+
+/***********************
+ POSTCARD FORM
+***********************/
+document.addEventListener("DOMContentLoaded", function () {
+    const sendBtn = document.getElementById("postcard-send");
+    const successMsg = document.getElementById("postcard-success");
+
+    // Load EmailJS
+    const script = document.createElement("script");
+    script.src = "https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js";
+    script.onload = () => emailjs.init("WbmEhwpELyRYcyeJi"); // replace with your public key
+    document.head.appendChild(script);
+
+    if (!sendBtn) return;
+
+    sendBtn.addEventListener("click", async function () {
+        const name = document.querySelector(".postcard-form-overlay [name='name']").value.trim();
+        const email = document.querySelector(".postcard-form-overlay [name='email']").value.trim();
+        const message = document.querySelector(".postcard-form-overlay [name='message']").value.trim();
+
+        if (!name || !email || !message) {
+            alert("Please fill in all fields.");
+            return;
+        }
+
+        // Get the currently visible postcard slide image URL
+        const activeSlide = document.querySelector("[data-carousel='carousel-p'] .slide[style*='block']");
+        const postcardURL = activeSlide ? activeSlide.querySelector("img").src : "unknown";
+
+        const response = await emailjs.send("service_713xcj1", "template_n85bj1k", {
+            name,
+            email,
+            message,
+            postcard: postcardURL
+        });
+
+        if (response.status === 200) {
+            sendBtn.style.display = "none";
+            successMsg.style.display = "block";
+        } else {
+            alert("Something went wrong. Please try again.");
+        }
+    });
 });
