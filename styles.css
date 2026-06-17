@@ -391,7 +391,7 @@ img{
     border: none;
     border-bottom: 1px solid rgba(0,0,0,0.1);
     font-family: 'ibm-plex-mono', 'adobe-garamond-pro', serif;
-    font-size: 0.6em;
+    font-size: 0.5em;
     color: black;
     outline: none;
     width: 40%; /* adjust to fit template image */
